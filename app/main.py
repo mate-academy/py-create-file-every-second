@@ -5,7 +5,11 @@ from datetime import datetime
 def start_infinite_file_creation():
     while True:
         cur_time = datetime.now()
-        with open(file=f"app-{cur_time.hour}_{cur_time.minute}_{cur_time.second}.log", mode='w') as fout:
+        file_name = f"app-" \
+                    f"{cur_time.hour}_" \
+                    f"{cur_time.minute}_" \
+                    f"{cur_time.second}.log"
+        with open(file=file_name, mode='w') as fout:
             fout.write(str(cur_time))
             print(cur_time, fout.name)
         sleep(1)
