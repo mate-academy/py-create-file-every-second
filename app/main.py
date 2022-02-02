@@ -9,7 +9,7 @@ def app():
                          f'{file_name.minute}_' \
                          f'{file_name.second}.log'
         with open(file_name_time, 'w') as file:
-            file.writelines(str(file_name) + ' ' + file_name_time)
+            file.writelines(str(file_name))
             print(file_name, file_name_time)
         time.sleep(1)
 
