@@ -4,7 +4,7 @@ import time
 
 while True:
     now = datetime.now()
-    file_name = f"app-{now.strftime('%H')}_{now.strftime('%M')}_{now.strftime('%S')}.log"
+    file_name = f"app-{now.strftime('%H_%M_%S')}.log"
     with open(f"{file_name}.txt", "w") as file:
         file.write(str(now))
     print(f"{now} {file_name}")
