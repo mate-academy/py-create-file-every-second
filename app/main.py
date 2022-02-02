@@ -5,16 +5,12 @@ import time
 def app():
     while True:
         file_name = datetime.now()
-        with open(
-                f'app-{file_name.hour}_{file_name.minute}'
-                f'_{file_name.second}.log', 'w'
-        ) as file:
-            file.writelines(
-                str(file_name) + f' app-{file_name.hour}'
-                                 f'_{file_name.minute}_{file_name.second}.log'
-            )
-            print(file_name, f'app-{file_name.hour}'
-                             f'_{file_name.minute}_{file_name.second}.log')
+        file_name_time = f'app-{file_name.hour}_' \
+                         f'{file_name.minute}_' \
+                         f'{file_name.second}.log'
+        with open(file_name_time, 'w') as file:
+            file.writelines(str(file_name) + ' ' + file_name_time)
+            print(file_name, file_name_time)
         time.sleep(1)
 
 
