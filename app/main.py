@@ -7,6 +7,6 @@ def logs():
         currenttime = datetime.datetime.now()
         name = f"app-{currenttime.strftime('%H_%M_%S')}.log"
         with open(name, "a") as f:
-            f.writelines(str(currenttime))
+            f.write(str(currenttime))
         print(currenttime, name)
         time.sleep(1)
