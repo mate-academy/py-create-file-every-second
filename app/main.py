@@ -9,7 +9,7 @@ def create_file_every_second():
             content = datetime.datetime.now().strftime("%Y-%m-%d %X.%f")
             f.write(content)
         time.sleep(1)
-        print(file_name + " " + content)
+        print(file_name, content)
 
 
 def main():
