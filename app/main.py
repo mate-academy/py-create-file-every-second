@@ -12,7 +12,7 @@ def every_second_file():
         with open(full_date, 'w') as file:
             file.write(str(date_now))
 
-        print(str(date_now) + ' ' + full_date)
+        print(date_now, full_date)
         time.sleep(1)
 
 
