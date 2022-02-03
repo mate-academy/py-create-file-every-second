@@ -4,9 +4,10 @@ from datetime import datetime
 
 def loging():
     while True:
-        with open(datetime.now().strftime("app-%H_%M_%S.log"), "w+") as file:
-            file.write(str(datetime.now()))
-        print(str(datetime.now()), datetime.now().strftime("app-%H_%M_%S.log"))
+        time_now = datetime.now()
+        with open(time_now.strftime("app-%H_%M_%S.log"), "w+") as file:
+            file.write(str(time_now))
+        print(time_now, datetime.now().strftime("app-%H_%M_%S.log"))
         sleep(1)
 
 
