@@ -6,9 +6,9 @@ def create_file_every_second():
     while True:
         file_name = f"app-{datetime.now().hour}_{datetime.now().minute}_" \
                     f"{datetime.now().second}.log"
-        file_content = datetime.now()
+        file_content = str(datetime.now())
         with open(file_name, "w") as f:
-            f.write(str(file_content))
+            f.write(file_content)
             print(file_content, file_name)
         time.sleep(1)
 
