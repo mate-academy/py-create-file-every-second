@@ -10,5 +10,5 @@ def create_a_file_every_second():
         with open(file_name, "w") as f:
             f.write(f"{datetime.datetime.now()}")
 
-        print(f"The file {file_name} created successfully")
+        print(f"{datetime.datetime.now()} {file_name}")
         time.sleep(1)
