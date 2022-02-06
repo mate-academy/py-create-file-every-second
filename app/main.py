@@ -5,13 +5,13 @@ import time
 def files_creator():
     while True:
         accurate_time = datetime.datetime.now()
-        accurate_time = (f"app-{str(accurate_time.hour)}"
+        file_name = (f"app-{str(accurate_time.hour)}"
                          f"_{str(accurate_time.minute)}"
                          f"_{str(accurate_time.second)}.log")
 
-        with open(accurate_time, "w") as f:
-            f.write(str(datetime.datetime.now()))
-            print(datetime.datetime.now(), accurate_time)
+        with open(file_name, "w") as f:
+            f.write(str(accurate_time))
+            print(accurate_time, file_name)
         time.sleep(1)
 
 
