@@ -4,10 +4,11 @@ import time
 
 def create_file_every_second():
     while True:
-        file_name = 'app-' + datetime.datetime.now().strftime("%-H_%-M_%-S") + '.log'
-        with open(file_name, 'w') as f:
-            content = datetime.datetime.now().strftime("%Y-%m-%d %X.%f")
-            f.write(content)
+        time_now = datetime.datetime.now()
+        file_name = f"app-{time_now.strftime('%-H_%-M_%-S')}.log"
+        with open(file_name, 'w') as moment_file:
+            content = time_now.strftime("%Y-%m-%d %X.%f")
+            moment_file.write(content)
         time.sleep(1)
         print(file_name, content)
 
