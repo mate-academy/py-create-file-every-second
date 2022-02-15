@@ -1,10 +1,16 @@
-import datetime
-import time
+from datetime import datetime
+from time import sleep
 
-while True:
-    timestamp = datetime.datetime.now().strftime("%H_%M_%S")
 
-    with open("app-" + timestamp + ".log", "w") as f:
-        f.write(str(datetime.datetime.now()))
-        print(str(datetime.datetime.now()), "app-" + timestamp + ".log")
-        time.sleep(1)
+def file_creating():
+    while True:
+        file_name = f"app-{datetime.today().strftime('%H_%M_%S')}.log"
+        timestamp = datetime.today().strftime("%Y-%m-%d %H:%M:%S.%f")
+        with open(file_name, "w") as file:
+            file.writelines(timestamp)
+            print(timestamp, file_name)
+        sleep(1)
+
+
+if __name__ == "__main__":
+    file_creating()
