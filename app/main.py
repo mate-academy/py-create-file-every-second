@@ -9,5 +9,3 @@ def main():
         with open(f'app-{t.hour}_{t.minute}_{t.second}.log', 'w') as f:
             f.write(str(t))
             print(f.name, str(t))
-
-main()
