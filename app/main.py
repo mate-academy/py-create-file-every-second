@@ -17,6 +17,7 @@ while True:
             f"{now.strftime('%X')}."
             f"{now.strftime('%f')}"
         )
+
         f.write(content)
         print(content + file_name)
         time.sleep(1)
