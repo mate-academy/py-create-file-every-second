@@ -1,20 +1,22 @@
-import datetime
-import time
+from datetime import datetime
+from time import sleep
 
 
 def main():
     while True:
-        date_now = datetime.datetime.now()
-        time_info = f"{datetime.datetime.now().hour}_" \
-                    f"{datetime.datetime.now().minute}_" \
-                    f"{datetime.datetime.now().second}"
+        date_now = datetime.now()
+        info = f"app-" \
+               f"{date_now.strftime('%H')}_" \
+               f"{date_now.strftime('%M')}_" \
+               f"{date_now.strftime('%S')}" \
+               f".log"
 
-        with open(f"app-{time_info}.log", "w") as log_file:
+        with open(info, "w") as log_file:
             log_file.write(f"{date_now}")
 
-        print(f"app-{time_info}.log")
+        print(f"{info}")
         print(f"{date_now}")
-        time.sleep(1)
+        sleep(1)
 
 
 if __name__ == "__main__":
