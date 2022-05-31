@@ -90,8 +90,7 @@ def test_main(
             if time.time() - start_time > number_of_files - 0.5:
                 raise KeyboardInterrupt
             return timestamps[int(time.time() - start_time)]
-
-    monkeypatch.setattr(datetime, "datetime", MockDatetime)
+    monkeypatch.setattr("app.main.datetime", MockDatetime)
     with CleanUpFiles(filenames):
         with pytest.raises(KeyboardInterrupt):
             f = StringIO()
