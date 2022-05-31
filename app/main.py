@@ -11,12 +11,17 @@ def main():
                f"{date_now.strftime('%S')}" \
                f".log"
 
-        with open(info, "w") as log_file:
-            log_file.write(f"{date_now}")
+        with open(info, "w") as f:
+            content = (
+                f"{date_now.strftime('%Y')}-"
+                f"{date_now.strftime('%m')}-"
+                f"{date_now.strftime('%d')} "
+                f"{date_now.strftime('%X')}"
+            )
 
-        print(info)
-        print(f"{date_now}")
-        sleep(1)
+            f.write(content)
+            print(content + " " + info)
+            sleep(1)
 
 
 if __name__ == "__main__":
