@@ -1,10 +1,10 @@
-from datetime import datetime
+import datetime
 import time
 
 
 def main():
     while True:
-        current_time = datetime.now()
+        current_time = datetime.datetime.now()
         file_name = current_time.strftime("app-%H_%M_%S.log")
         f = open(file_name, 'w')
         f.write(str(current_time))
