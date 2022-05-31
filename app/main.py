@@ -1,8 +1,8 @@
-from datetime import datetime
+from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
 
-def w_file_every_second():
+def main():
     while True:
         now = datetime.now()
         filename = now.strftime("app-%H_%M_%S.log")
@@ -11,3 +11,7 @@ def w_file_every_second():
             sleep(1)
 
         print(now, filename)
+
+
+if __name__ == "__main__":
+    main()

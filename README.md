@@ -26,3 +26,12 @@ with open("app-14_10_7.log", "r") as f:
     print(f.read())
 # 2020-01-01 14:10:07.057405
 ```
+
+**Important**: to import datetime use the following syntax: 
+```python
+from datetime import datetime
+```
+Do not use this notation:
+```python
+import datetime
+```

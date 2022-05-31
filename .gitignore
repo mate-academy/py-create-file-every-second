@@ -1,5 +1,6 @@
 .idea/
 .vscode/
+tests/*.txt
 *.iml
 .env
 .DS_Store
