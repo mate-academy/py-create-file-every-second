@@ -8,8 +8,8 @@ def main():
         current_time = datetime.now()
         name = f"app-{current_time.hour}_{current_time.minute}_{current_time.second}.log"
         with open(name, "w") as f:
-            f.write(str(current_time))
-        print(current_time, f.name)
+            f.write(str(datetime.now()))
+        print(datetime.now(), f.name)
 
 
 if __name__ == '__main__':
