@@ -9,7 +9,7 @@ def main():
         name = f"app-{current_time.hour}_{current_time.minute}_{current_time.second}.log"
         with open(name, "w") as f:
             f.write(str(datetime.now()))
-        print(datetime.now(), f.name)
+        print(str(datetime.now()), f.name)
 
 
 if __name__ == '__main__':
