@@ -5,11 +5,11 @@ from datetime import datetime
 def main():
     while True:
         sleep(1)
-        current_time = datetime.now()
-        name = f"app-{current_time.hour}_{current_time.minute}_{current_time.second}.log"
+        ct = datetime.now()
+        name = f"app-{ct.hour}_{ct.minute}_{ct.second}.log"
         with open(name, "w") as f:
             f.write(str(datetime.now()))
-        print(str(datetime.now()), f.name)
+        print(datetime.now(), f.name)
 
 
 if __name__ == '__main__':
