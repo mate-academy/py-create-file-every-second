@@ -1,16 +1,16 @@
-from time import sleep
 from datetime import datetime
+from time import sleep
 
 
 def main():
     while True:
+        time = datetime.now()
+        with open(f"app-{time.hour}_{time.minute}_{time.second:02d}"
+                  f".log", "w") as f:
+            f.write(str(time))
         sleep(1)
-        ct = datetime.now()
-        name = f"app-{ct.hour}_{ct.minute}_{ct.second}.log"
-        with open(name, "w") as f:
-            f.write(str(datetime.now()))
-        print(datetime.now(), f.name)
+        print(f"{time} app-{time.hour}_{time.minute}_{time.second:02d}.log")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
