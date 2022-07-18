@@ -1,6 +1,7 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
+
 def main():
     while True:
         time_now = datetime.now()
