@@ -3,13 +3,13 @@ import time
 
 
 def main():
-    now = datetime.now()
-    current_time = f"{now.hour}_{now.minute}_{now.second}"
     while True:
-        with open(f"app-{current_time}.log", "w") as f:
+        now = datetime.now()
+        file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        with open(file_name, "w") as f:
             f.write(f"{now}")
-            print(now, f"app-{current_time}.log")
-            time.sleep(1)
+        print(now, file_name)
+        time.sleep(1)
 
 
 if __name__ == "__main__":
