@@ -3,7 +3,6 @@ import time
 
 
 def main():
-
     while True:
         current_time = datetime.now()
         name_of_file = f"app-" \
