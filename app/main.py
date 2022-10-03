@@ -8,8 +8,7 @@ def main():
         file_name = f"app-{full_time_now.hour}_{full_time_now.minute}_{full_time_now.second}.log"
         with open(file_name, "w") as f:
             f.write(str(file_name))
-        with open(file_name, "r") as f:
-            print(full_time_now, file_name)
+        print(full_time_now, file_name)
         time.sleep(1)
 
 
