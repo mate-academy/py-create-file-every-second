@@ -9,7 +9,7 @@ def main():
         with open(file_name, "w") as f:
             f.write(str(file_name))
         with open(file_name, "r") as f:
-            print(f.read())
+            print(full_time_now, file_name)
         time.sleep(1)
 
 
