@@ -12,9 +12,7 @@ def main() -> None:
 
         with open(file_name, "w") as log_file:
             log_file.write(now_time)
-
         print(f"{now_time} {file_name}")
-
         sleep(1)
 
 
