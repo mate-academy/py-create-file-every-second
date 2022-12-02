@@ -12,7 +12,7 @@ def main() -> str:
             print(date, file_name)
 
         sleep(1)
-        
+
 
 if __name__ == "__main__":
     main()
