@@ -6,8 +6,8 @@ def main() -> None:
     while True:
         now = datetime.now()
         file_name = "app-" + now.strftime("%H_%M_%S") + ".log"
-        file = open(file_name, "w")
-        file.write(str(now))
+        new_file = open(file_name, "w")
+        new_file.write(str(now))
         print(now, file_name)
         sleep(1)
 
