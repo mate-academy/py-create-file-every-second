@@ -5,10 +5,12 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 def main() -> None:
 
     while True:
-        v = datetime.now()
-        with open(f"app-{v.hour}_{v.minute}_{v.second}.log", "w") as f:
-            f.write(f"{v}")
-            print(v, f"app-{v.hour}_{v.minute}_{v.second}.log")
+        value = datetime.now()
+        with open(
+                f"app-{value.hour}_{value.minute}_{value.second}.log", "w"
+        ) as f:
+            f.write(f"{value}")
+            print(value, f"app-{value.hour}_{value.minute}_{value.second}.log")
         time.sleep(1)
 
 
