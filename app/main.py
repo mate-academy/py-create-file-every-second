@@ -8,9 +8,10 @@ def main() -> None:
         file_name = (
             f"app-{time_now.hour}_{time_now.minute}_{time_now.second}.log"
         )
-        second_file = open(file_name, "w")
-        second_file.write(f"{time_now}")
+        new_file = open(file_name, "w")
+        new_file.write(f"{time_now}")
         print(f"{time_now} {file_name}")
+        new_file.close()
         time.sleep(1)
 
 
