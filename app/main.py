@@ -4,19 +4,15 @@ import time
 
 def main() -> None:
     while True:
-        file_name = (
-            "app-"
-            + str(datetime.now().hour)
-            + "_"
-            + str(datetime.now().minute)
-            + "_"
-            + str(datetime.now().second)
-            + ".log"
-        )
+        now = datetime.now()
+        file_name = (f"app-{now.hour}_"
+                     f"{now.minute}_"
+                     f"{now.second}.log")
 
-        new_file = open(file_name, "w")
-        new_file.write(str(datetime.now()))
-        new_file.close()
+        with open(file_name, "w") as new_file:
+            new_file.write(str(now))
+
+        print(f"{now} {file_name}")
 
         time.sleep(1)
 
