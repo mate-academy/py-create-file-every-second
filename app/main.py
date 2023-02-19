@@ -8,7 +8,7 @@ def create_file(name: str, current_time: str) -> None:
         print(f"{current_time} {name}.log")
 
 
-def main():
+def main() -> None:
     while True:
         now = datetime.now()
         name = f"app-{now.hour}_{now.minute}_{now.second}"
