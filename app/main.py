@@ -1,4 +1,3 @@
-import time
 from datetime import datetime
 from time import sleep
 
@@ -13,7 +12,7 @@ def main() -> None:
             f.write(f"{now.strftime('%Y')}-{now.strftime('%m')}-"
                     f"{now.strftime('%d')} {now.strftime('%H')}:"
                     f"{now.strftime('%M')}:{now.strftime('%S')}")
-            time.sleep(1)
+            sleep(1)
         with open(name_of_file, "r") as f:
             text = f.read()
         print(text, name_of_file)
