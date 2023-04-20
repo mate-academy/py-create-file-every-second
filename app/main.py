@@ -2,7 +2,7 @@ from datetime import datetime
 import time
 
 
-def main():
+def main() -> None:
     while True:
         current_time = datetime.now().strftime("%H_%M_%S")
         with open(f"app-{current_time}.log", "w") as f:
