@@ -3,11 +3,17 @@ from time import sleep
 
 
 def main() -> None:
-    dt = datetime.now()
     while True:
-        with open(f"app-{dt.hour}_{dt.minute}_{dt.second}.log", "w") as f:
-            f.write(str(dt))
-        print(str(dt) + f" app-{dt.hour}_{dt.minute}_{dt.second}.log")
+        with open(
+                f"app-{datetime.now().hour}_{datetime.now().minute}_"
+                f"{datetime.now().second}.log", "w") as f:
+            f.write(str(datetime.now()))
+
+        print(
+            str(datetime.now()) + f" app-{datetime.now().hour}_"
+                                  f"{datetime.now().minute}_"
+                                  f"{datetime.now().second}.log"
+        )
         sleep(1)
 
 
