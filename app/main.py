@@ -9,6 +9,7 @@ def main() -> None:
         file_name = "app-" + current_date.strftime("%H_%M_%S") + ".log"
         with open(file_name, "a") as f:
             f.write(formatted_datetime)
+            print(formatted_datetime, file_name)
         time.sleep(1)
 
 
