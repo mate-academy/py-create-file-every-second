@@ -4,7 +4,8 @@ from time import sleep
 
 def create_file() -> None:
     current_time: datetime = datetime.now()
-    file_name: str = f"app-{current_time.hour}_{current_time.minute}_{current_time.second}.log"
+    file_name: str = f"app-{current_time.hour}_" \
+                     f"{current_time.minute}_{current_time.second}.log"
     file_content: str = str(current_time)
 
     with open(file_name, "w") as file:
