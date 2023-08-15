@@ -1,16 +1,16 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from time import sleep
 
 
-def main():
+def main() -> None:
     while True:
-        now = datetime.now()
-        timestamp = now.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
-        file_name = f"app-{now.hour:02d}_{now.minute:02d}_{now.second:02d}.log"
-        file_content = timestamp + "\n"
-        with open(file_name, "w") as file:
-            file.write(file_content)
-        time.sleep(1)
+        time_stamp = datetime.now()
+        file_name = (f"app-{time_stamp.hour}_"
+                     f"{time_stamp.minute}_{time_stamp.second}.log")
+        with open(file_name, "x") as f:
+            f.write(str(time_stamp))
+            print(time_stamp, file_name)
+        sleep(1)
 
 
 if __name__ == "__main__":
-    main()
