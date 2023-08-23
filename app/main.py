@@ -4,12 +4,14 @@ from time import sleep
 
 def main() -> None:
     while True:
-        file_name = (f"app-{datetime.now().hour}_"
-                     f"{datetime.now().minute}_"
-                     f"{datetime.now().second}.log")
+        time_now = datetime.now()
+        file_name = (f"app-{time_now.hour}_"
+                     f"{time_now.minute}_"
+                     f"{time_now.second}.log"
+                     )
         with open(file_name, "w") as f:
-            f.write(f"{datetime.now()}")
-        print(f"{datetime.now()} {file_name}")
+            f.write(f"{time_now}")
+        print(f"{time_now} {file_name}")
         sleep(1)
 
 
