@@ -5,8 +5,8 @@ import time
 def main():
     while True:
         current_time = datetime.now()
-        file_name = f"app-{current_time.hour}_{current_time.minute}" \
-                    f"_{current_time.second}.log"
+        file_name = f"app-{current_time.hour}" \
+                    f"_{current_time.minute}_{current_time.second}.log"
 
         with open(file_name, "w") as file:
             file.write(str(current_time))
