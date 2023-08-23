@@ -2,7 +2,7 @@ from datetime import datetime
 import time
 
 
-def main():
+def main() -> None:
     while True:
         current_time = datetime.now()
         file_name = f"app-{current_time.hour}" \
