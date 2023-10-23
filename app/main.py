@@ -2,7 +2,7 @@ from datetime import datetime
 from time import sleep
 
 
-def main():
+def main() -> None:
     while True:
         current_time = datetime.now()
         hours = f"{current_time.hour:02}"
