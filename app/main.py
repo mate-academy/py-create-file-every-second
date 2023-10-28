@@ -1,15 +1,21 @@
 import time
 from datetime import datetime
 
-while True:
-    now = datetime.now()
 
-    filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
-    timestamp = str(now)
+def main() -> None:
+    while True:
+        now = datetime.now()
 
-    with open(filename, "w") as f:
-        f.write(timestamp)
+        filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        timestamp = str(now)
 
-    print(timestamp, filename)
+        with open(filename, "w") as f:
+            f.write(timestamp)
 
-    time.sleep(1)
+        print(timestamp, filename)
+
+        time.sleep(1)
+
+
+if __name__ == "__main__":
+    main()
