@@ -11,10 +11,11 @@ def main():
         hours = date.strftime("%H")
         minutes = date.strftime("%M")
         seconds = date.strftime("%S")
-        relative_path = f"app-{hours}_{minutes}_{seconds}.log"
-        file_path = os.path.join(script_dir, relative_path)
+        file_name = f"app-{hours}_{minutes}_{seconds}.log"
+        file_path = os.path.join(script_dir, file_name)
         with open(file_path, "w") as f:
             f.write(str(date))
+            print(str(date), file_name)
             sleep(1)
 
 
