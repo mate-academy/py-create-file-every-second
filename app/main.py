@@ -7,7 +7,7 @@ def main() -> None:
     in the current directory every second. """
     while True:
         now = str(datetime.now())
-        name = f"app-{now.split()[1].split(".")[0].replace(":", "_")}.log"
+        name = "app-" + now.split()[1].split(".")[0].replace(":", "_") + ".log"
         with open(name, "w") as file:
             file.write(now)
         print(now, name)
