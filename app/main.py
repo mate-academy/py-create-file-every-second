@@ -3,8 +3,9 @@ from time import sleep
 
 
 def main() -> None:
-    current_time = datetime.now()
+
     while True:
+        current_time = datetime.now()
         file_name = (
             f"app-{current_time.hour}_"
             f"{current_time.minute}_"
@@ -14,7 +15,7 @@ def main() -> None:
         with open(file_name, "w") as file:
             file.write(str(current_time))
 
-            print(current_time, file_name)
+            print(f"{datetime.now()} {file_name}")
 
             sleep(1)
 
