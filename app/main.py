@@ -15,7 +15,7 @@ def main() -> None:
         with open(file_name, "w") as file:
             file.write(str(current_time))
 
-            print(f"{datetime.now()} {file_name}")
+            print(f"{current_time} {file_name}")
 
             sleep(1)
 
