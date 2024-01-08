@@ -1,4 +1,3 @@
-import time
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
