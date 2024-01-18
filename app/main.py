@@ -1,5 +1,5 @@
-import time
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from time import sleep
 
 
 def main() -> None:
@@ -9,7 +9,7 @@ def main() -> None:
         fname = f"app-{current.hour}_{current.minute}_{current.second}.log"
         with open(fname, "a") as f:
             f.write(current.__str__())
-        time.sleep(1)
+        sleep(1)
         print(current.__str__(), fname)
 
 
