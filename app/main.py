@@ -1,20 +1,20 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPOR
-import time
+from time import sleep
 import os
 import sys
 
 
-def main():
+def main() -> None:
     os.chdir(os.path.dirname(sys.argv[0]))
     while True:
-        d = datetime.now()
-        h, m, s = d.hour, d.minute, d.second
-        name = f"app-{h}_{m}_{s}.log"
+        date = datetime.now()
+        hr, mn, sd = date.hour, date.minute, date.second
+        name = f"app-{hr}_{mn}_{sd}.log"
         new_file = open(name, "w")
-        new_file.write(str(d))
+        new_file.write(str(date))
         new_file.close()
-        print(f"{d} {name}")
-        time.sleep(1)
+        print(f"{date} {name}")
+        sleep(1)
 
 
 if __name__ == "__main__":
