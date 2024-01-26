@@ -3,6 +3,7 @@ from datetime import datetime
 
 
 def main() -> None:
+
     while True:
         date = datetime.now()
         file_name = f"app-{date.hour}_{date.minute}_{date.second}.log"
