@@ -8,8 +8,7 @@ def main() -> None:
         file_name = f"app-{c_time.hour}_{c_time.minute}_{c_time.second}.log"
         print(f"{c_time} {file_name}")
         with open(file_name, "w") as f:
-            f.write(f"{c_time.year}-{c_time.month}-{c_time.day}"
-                    f" {c_time.hour}{":"}{c_time.minute}{":"}{c_time.second}")
+            f.write(c_time.strftime("%Y-%m-%d %H:%M:%S"))
         time.sleep(1)
 
 
