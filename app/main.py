@@ -14,10 +14,7 @@ def create_file() -> None:
     with open(file_name, "a") as f:
         f.write(file_content)
 
-    print(
-        f"{current_time.strftime("%Y-%m-%d %H:%M:%S.%f")[:-7]}"
-        f" {file_name}"
-    )
+    print(f"{file_content} {file_name}")
 
 
 def main() -> None:
