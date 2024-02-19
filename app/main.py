@@ -5,7 +5,8 @@ from time import sleep
 def main() -> None:
     while True:
         date_now = datetime.now()
-        file_name = f"app-{date_now.hour}_{date_now.minute}_{date_now.second}.log"
+        file_name =\
+            f"app-{date_now.hour}_{date_now.minute}_{date_now.second}.log"
 
         with open(file_name, "w") as file:
             file.write(str(date_now))
