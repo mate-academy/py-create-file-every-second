@@ -12,7 +12,7 @@ def main() -> None:
         file_content = f"{datetime.now()}"
         print_content = f"{file_content} {filename}"
 
-        with open(filename, 'a') as f:
+        with open(filename, "a") as f:
             f.write(file_content)
             print(print_content)
             time.sleep(1)
