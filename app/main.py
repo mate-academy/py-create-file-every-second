@@ -1,9 +1,15 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+import time
+from datetime import datetime
 
 
-def main():
-    # write your code here
-    pass
+def main() -> None:
+    while True:
+        day = datetime.now()
+        with open(f"app-{day.hour}_{day.minute}_{day.second}.log",
+                  "w") as files:
+            files.write(str(datetime.now()))
+        print(f"{datetime.now()} app-{day.hour}_{day.minute}_{day.second}.log")
+        time.sleep(1)
 
 
 if __name__ == "__main__":
