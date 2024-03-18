@@ -11,5 +11,6 @@ def main() -> None:
         print(current_time, file_name)
         time.sleep(1.0)
 
+
 if __name__ == "__main__":
     main()
