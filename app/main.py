@@ -2,7 +2,7 @@ from datetime import datetime
 from time import sleep
 
 
-def main():
+def main() -> None:
     now = datetime.now()
     formate_time = now.strftime("%Y-%m-%d %H:%M:%S")
     file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
