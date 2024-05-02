@@ -4,10 +4,13 @@ from time import sleep
 
 def main() -> None:
     while True:
-        file_name = f"app-{datetime.now().strftime("%H_%M_%S")}.log"
+        current_time = datetime.now()
+        time_formatted = current_time.strftime("%H_%M_%S")
+        file_name = f"app-{time_formatted}.log"
+
         with open(file_name, "w") as f:
-            f.write(f"{datetime.now()}")
-            print(f"{datetime.now()} {file_name}")
+            f.write(f"{current_time}")
+            print(f"{current_time} {file_name}")
             sleep(1)
 
 
