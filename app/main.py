@@ -9,7 +9,7 @@ def main() -> None:
                         f"_{time_now.minute}"
                         f"_{time_now.second}.log", "w")
         new_file.write(str(time_now))
-        print(datetime.now(), new_file)
+        print(datetime.now(), new_file.name)
         time.sleep(1)
 
 
