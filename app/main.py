@@ -2,7 +2,7 @@ import time
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 
 
-def main():
+def main() -> None:
     while True:
         time_now = datetime.now()
         new_file = open(f"app-{time_now.hour}"
