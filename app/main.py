@@ -15,7 +15,7 @@ def main() -> None:
             file.write(now.strftime("%Y-%m-%d %H:%M:%S.%f"))
 
         # Виводимо інформацію про створення файлу
-        print(f"{now.strftime("%Y-%m-%d %H:%M:%S.%f")} {file_name}")
+        print(f'{now.strftime("%Y-%m-%d %H:%M:%S.%f")} {file_name}')
 
         # Затримка на 1 секунду
         time.sleep(1)
