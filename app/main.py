@@ -1,9 +1,8 @@
-import os
 import time
 from datetime import datetime
 
 
-def main():
+def main() -> None:
     while True:
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
         hours, minutes, seconds = datetime.now().strftime("%H %M %S").split()
