@@ -1,15 +1,17 @@
-from datetime import datetime
+import os
 import time
+from datetime import datetime
 
 
-def main() -> None:
+def main():
     while True:
-        now = datetime.now()
-        file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+        hours, minutes, seconds = datetime.now().strftime("%H %M %S").split()
+        file_name = f"app-{hours}_{minutes}_{seconds}.log"
+        with open(file_name, "w") as f:
+            f.write(timestamp)
+        print(f"{timestamp} {file_name}")
 
-        with open(file_name, "w") as file:
-            file.write(now.strftime("%Y-%m-%d %H:%M:%S.%f"))
-        print(f'{now.strftime("%Y-%m-%d %H:%M:%S.%f")} {file_name}')
         time.sleep(1)
 
 
