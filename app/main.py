@@ -2,13 +2,13 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
 
-def main():
+def main() -> None:
     while True:
         now = datetime.now()
-        file = f"app-{now.hour}_{now.minute}_{now.second}.log"
-        with open(f"{file}", "w") as f:
+        file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        with open(f"{file_name}", "w") as f:
             f.write(f"{now}")
-        print(now, file)
+        print(now, file_name)
         sleep(1)
 
 
