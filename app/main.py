@@ -17,7 +17,7 @@ def main() -> None:
     output = []
     while True:
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        filename = f"app-{datetime.now().strftime("%H_%M_%S")}.log"
+        filename = f"app-{datetime.now().strftime('%H_%M_%S')}.log"
         output.append(f"{timestamp} {filename}")
         print(output[-1])  # Виводимо тільки останній рядок, доданий до списку
         with open(filename, "w") as f:
