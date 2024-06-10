@@ -5,9 +5,8 @@ import time
 def main() -> None:
     while True:
         temp_time = str(datetime.now())
-        temp_file = (f"app-{temp_time[11:19].split(":")[0]}"
-                     f"_{temp_time[11:19].split(":")[1]}"
-                     f"_{temp_time[11:19].split(":")[2]}.log")
+        only_time = temp_time[11:19].split(":")
+        temp_file = f"app-{only_time[0]}_{only_time[1]}_{only_time[2]}.log"
         with open(f"{temp_file}", "w") as file:
             file.write(str(temp_time))
         print(temp_time, temp_file)
