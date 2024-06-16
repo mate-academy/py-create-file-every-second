@@ -7,7 +7,8 @@ def main() -> None:
         currnet_time = datetime.now()
 
         with open(f"app-{currnet_time.hour}_"
-                  f"{currnet_time.minute}_{currnet_time.second}.log", "a") as f:
+                  f"{currnet_time.minute}_"
+                  f"{currnet_time.second}.log", "a") as f:
             f.write(str(currnet_time))
             print(str(currnet_time), f"app-"
                                      f"{currnet_time.hour}"
