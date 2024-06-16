@@ -6,16 +6,14 @@ def main() -> None:
     while True:
         currnet_time = datetime.now()
 
-        file_name = \
-            (f"app-{currnet_time.hour}"
-             f"_{currnet_time.minute}_"
-             f"{currnet_time.second}.log")
+        with open(f"app-{currnet_time.hour}_"
+                  f"{currnet_time.minute}_{currnet_time.second}.log", "a") as f:
+            f.write(str(currnet_time))
+            print(str(currnet_time), f"app-"
+                                     f"{currnet_time.hour}"
+                                     f"_{currnet_time.minute}"
+                                     f"_{currnet_time.second}.log")
 
-        with open(file_name, "w") as f:
-            timestamp = currnet_time.strftime("%Y-%m-%d %H:%M:%S.%f")
-            f.write(timestamp)
-
-        print(f"{timestamp} {file_name}")
         time.sleep(1)
 
 
