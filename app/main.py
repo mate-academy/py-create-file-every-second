@@ -7,8 +7,8 @@ def main() -> None:
         current_time = datetime.now()
         with open(
                 f"app-{current_time.hour}_"
-                f"{current_time.minute}_{
-                current_time.second}.log", "w") as f:
+                f"{current_time.minute}_"
+                f"{current_time.second}.log", "w") as f:
             f.write(f"{datetime.now()}")
         print(f"{current_time} {f.name}")
         sleep(1)
