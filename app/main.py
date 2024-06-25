@@ -6,7 +6,11 @@ def main() -> None:
     while True:
         now = datetime.now()
 
-        file_name = f"app-{now.hour: 02}_{now.minute: 02}_{now.second: 02}.log"
+        hour = now.hour
+        minute = now.minute
+        second = now.second
+
+        file_name = f"app-{hour}_{minute}_{second}.log"
 
         content = now.strftime("%Y-%m-%d %H:%M:%S")
 
