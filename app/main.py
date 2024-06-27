@@ -5,7 +5,6 @@ from datetime import datetime
 def main() -> None:
 
     while True:
-
         file_contents = datetime.now()
         file_name = (
             f"app-{datetime.now().hour}_{datetime.now().minute}"
