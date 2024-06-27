@@ -11,8 +11,8 @@ def main() -> None:
             f"_{datetime.now().second}.log"
         )
 
-        with open(file_name, "w") as f:
-            f.write(f"{file_contents}")
+        with open(file_name, "w") as file:
+            file.write(f"{file_contents}")
             print(f"{file_contents} {file_name}")
 
         sleep(1)
