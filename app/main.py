@@ -1,9 +1,8 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from time import sleep
 
-import time
 
-
-def main():
+def main() -> None:
     while True:
         current_date = datetime.now()
         hours = current_date.hour
@@ -13,7 +12,7 @@ def main():
         with open(file_name, "w") as file:
             file.write(str(current_date))
         print(f"{current_date} {file_name}")
-        time.sleep(1)
+        sleep(1)
 
 
 if __name__ == "__main__":
