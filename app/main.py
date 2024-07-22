@@ -10,7 +10,7 @@ def main() -> None:
                      f"{current_time.second}.log")
         with open(file_name, "w") as file:
             file.write(str(current_time))
-        print(str(current_time.strftime("%Y-%m-%d %H:%M:%S ")) + file_name)
+        print(current_time.strftime("%Y-%m-%d %H:%M:%S ") + file_name)
         time.sleep(1)
 
 
