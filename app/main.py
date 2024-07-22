@@ -9,12 +9,13 @@ def main() -> None:
                      f"_{datetime.now().second}.log")
         file_content = str(datetime.now())
 
-        print(file_content,file_name)
+        print(file_content, file_name)
 
         with open(file_name, "w") as f:
             f.write(file_content)
 
         sleep(1)
 
-if  __name__ == "__main__":
+
+if __name__ == "__main__":
     main()
