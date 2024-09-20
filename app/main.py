@@ -5,7 +5,7 @@ from time import sleep
 def create_file() -> None:
     now = datetime.now().replace(microsecond=0)
 
-    filename = f"app-{now.strftime("%H_%M_%S")}.log"
+    filename = f"app-{now.strftime('%H_%M_%S')}.log"
 
     content = now.strftime("%Y-%m-%d %H:%M:%S")
 
