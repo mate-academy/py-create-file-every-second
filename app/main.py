@@ -2,7 +2,7 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 import time
 
 
-def main() -> None:git
+def main() -> None:
     while True:
         current_date = datetime.now()
         file_name = ("app-" + str(current_date.hour)
