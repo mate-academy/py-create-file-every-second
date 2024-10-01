@@ -1,5 +1,5 @@
 import time
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
 
 
 def main() -> None:
@@ -13,7 +13,6 @@ def main() -> None:
         print(f"{timestamp} {file_name}")
 
         time.sleep(1)
-
 
 
 if __name__ == "__main__":
