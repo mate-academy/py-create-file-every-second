@@ -5,9 +5,10 @@ from time import sleep
 def main() -> None:
     while True:
         date = datetime.now()
-        with open(f"app-{date.strftime("%H_%M_%S")}.log", "w") as file:
+        time_hours_min_sec = date.strftime("%H_%M_%S")
+        with open(f"app-{time_hours_min_sec}.log", "w") as file:
             file.write(f"{date}")
-            print(f"{date} app-{date.strftime("%H_%M_%S")}.log")
+            print(f"{date} app-{time_hours_min_sec}.log")
         sleep(1)
 
 
