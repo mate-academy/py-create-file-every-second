@@ -2,7 +2,7 @@ import time
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 
 
-def main():
+def main() -> None:
     seconds = 5
     while seconds:
         current_time = datetime.now()
