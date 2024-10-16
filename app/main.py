@@ -10,8 +10,8 @@ def main() -> None:
         seconds = str(current_timestamp).split(":")[2].split(".")[0]
         filename = f"app-{hours}_{minutes}_{seconds}.log"
 
-        with open(filename, "a") as f:
-            f.write(str(current_timestamp))
+        with open(filename, "a") as file:
+            file.write(str(current_timestamp))
         print(current_timestamp, filename)
         sleep(1)
 
