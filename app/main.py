@@ -1,21 +1,15 @@
-from datetime import datetime
+from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
 
-def create_log_file() -> None:
+def main() -> None:
     while True:
-        now = datetime.now()
+        current_time = datetime.now()
+        file_name = (f"app-{current_time.hour}_{current_time.minute}_"
+                     f"{current_time.second}.log")
 
-        file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        with open(file_name, "w") as f:
+            f.write(f"{current_time}")
 
-        with open(file_name, "w") as file:
-            timestamp = now.strftime("%Y-%m-%d %H:%M:%S.%f")
-            file.write(timestamp)
-
-        print(f"{timestamp} {file_name}")
-
+        print(f"{current_time} {file_name}")
         sleep(1)
-
-
-if __name__ == "__main__":
-    create_log_file()
