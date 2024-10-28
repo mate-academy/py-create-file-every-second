@@ -1,9 +1,22 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime  # Импорт по требованию
+from time import sleep
 
 
-def main():
-    # write your code here
-    pass
+def main() -> None:
+    while True:
+        current_time = datetime.now()
+
+        file_name = (f"app-{current_time.hour}_"
+                     f"{current_time.minute}_"
+                     f"{current_time.second}.log")
+        timestamp = f"{current_time}"
+
+        with open(file_name, "w") as file:
+            file.write(timestamp)
+
+        print(f"{timestamp.strip()} {file_name}")
+
+        sleep(1)
 
 
 if __name__ == "__main__":
