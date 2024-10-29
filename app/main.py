@@ -1,9 +1,10 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
-def main():
+
+def main() -> None:
     while True:
-        datetime_now = datetime.now()	
+        datetime_now = datetime.now()
         hours = datetime_now.hour
         minutes = datetime_now.minute
         seconds = datetime_now.second
@@ -13,8 +14,8 @@ def main():
             timestamp_str = datetime_now.strftime("%Y-%m-%d %H:%M:%S.%f")
         filename = f"app-{hours}_{minutes}_{seconds}.log"
         with open(filename, "w") as f:
-             f.write(timestamp_str)
-        print(f"{timestamp_str} {filename}")            
+            f.write(timestamp_str)
+        print(f"{timestamp_str} {filename}")
         sleep(1)
 
 
