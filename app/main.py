@@ -1,5 +1,5 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
-from time import  sleep
+from time import sleep
 
 
 def main() -> any:
