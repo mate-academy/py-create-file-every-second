@@ -11,5 +11,6 @@ def main():
         print(d, f"app-{t.hour}_{t.minute}_{t.second}.log")
         time.sleep(1)
 
+
 if __name__ == "__main__":
     main()
