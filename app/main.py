@@ -2,7 +2,7 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
 
-def main():
+def main() -> None:
     while True:
         timer = datetime.now()
         hours = timer.strftime("%H")
@@ -12,7 +12,7 @@ def main():
         with open(name_to_open, "w") as f:
             time_str = str(timer)
             f.write(time_str)
-            print(f"File created: {name_to_open} at time {time_str}")
+            print(f"{time_str} {name_to_open}")
             sleep(1)
             
 if __name__ == "__main__":
