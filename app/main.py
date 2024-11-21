@@ -14,6 +14,6 @@ def main() -> None:
             f.write(time_str)
             print(f"{time_str} {name_to_open}")
             sleep(1)
-            
+
 if __name__ == "__main__":
     main()
