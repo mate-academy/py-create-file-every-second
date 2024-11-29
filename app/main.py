@@ -33,7 +33,7 @@ def create_log_files(loop_limit: Optional[int] = None, output_dir: str = ".") ->
         print("\nProcess terminated by user.")
 
 
-def main():
+def main() -> None:
     """Main entry point of the application."""
     create_log_files()
 
