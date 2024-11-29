@@ -1,7 +1,7 @@
 from datetime import datetime
 from time import sleep
 
-def create_log_files(loop_limit=None):
+def create_log_files(loop_limit=None, output_dir="."):
     """Create log files with a timestamp in an optional limited loop."""
     try:
         loop_count = 0
@@ -11,7 +11,7 @@ def create_log_files(loop_limit=None):
 
             # Format the file name
             file_name = (
-                f"app-{current_time.hour}_"
+                f"{output_dir}/app-{current_time.hour}_"
                 f"{current_time.minute}_"
                 f"{current_time.second}.log"
             )
