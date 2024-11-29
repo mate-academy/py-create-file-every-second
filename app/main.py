@@ -7,7 +7,11 @@ try:
         current_time = datetime.now()
 
         # Format the file name
-        file_name = f"app-{current_time.hour}_{current_time.minute}_{current_time.second}.log"
+        file_name = (
+            f"app-{current_time.hour}_"
+            f"{current_time.minute}_"
+            f"{current_time.second}.log"
+        )
 
         # Write the timestamp into the file
         with open(file_name, "w") as file:
