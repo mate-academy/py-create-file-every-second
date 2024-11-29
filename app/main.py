@@ -11,9 +11,10 @@ def create_log_files(loop_limit: Optional[int] = None, output_dir: str = ".") ->
             # Get the current timestamp
             current_time = datetime.now()
 
-            # Format the file name
+            # Format the file name in multiple lines to avoid long line
             file_name = (
-                f"{output_dir}/app-{current_time.hour}_"
+                f"{output_dir}/app-"
+                f"{current_time.hour}_"
                 f"{current_time.minute}_"
                 f"{current_time.second}.log"
             )
