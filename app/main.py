@@ -3,7 +3,10 @@ from time import sleep
 from typing import Optional
 
 
-def create_log_files(loop_limit: Optional[int] = None, output_dir: str = ".") -> None:
+def create_log_files(
+        loop_limit: Optional[int] = None,
+        output_dir: str = "."
+) -> None:
     """Create log files with a timestamp in an optional limited loop."""
     try:
         loop_count = 0
