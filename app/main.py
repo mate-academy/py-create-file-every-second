@@ -1,7 +1,9 @@
 from datetime import datetime
 from time import sleep
+from typing import Optional
 
-def create_log_files(loop_limit=None, output_dir="."):
+
+def create_log_files(loop_limit: Optional[int] = None, output_dir: str = ".") -> None:
     """Create log files with a timestamp in an optional limited loop."""
     try:
         loop_count = 0
@@ -29,6 +31,7 @@ def create_log_files(loop_limit=None, output_dir="."):
 
     except KeyboardInterrupt:
         print("\nProcess terminated by user.")
+
 
 if __name__ == "__main__":
     create_log_files()
