@@ -1,13 +1,13 @@
-from datetime import datetime # DO NOT CHANGE THIS IMPORT
+from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
 
 def main() -> None:
     while True:
         f_name = (f"app-"
-                     f"{datetime.now().hour}_"
-                     f"{datetime.now().minute}_"
-                     f"{datetime.now().second}.log")
+                  f"{datetime.now().hour}_"
+                  f"{datetime.now().minute}_"
+                  f"{datetime.now().second}.log")
         t_file = open(f"{f_name}", "w")
         c_time = datetime.now()
         formatted_time = c_time.strftime("%Y-%m-%d %H:%M:%S")
