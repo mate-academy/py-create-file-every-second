@@ -5,7 +5,7 @@ import time
 def main() -> None:
     while True:
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        filename = f"app-{datetime.now().strftime("%H_%M_%S")}.log"
+        filename = "app-" + datetime.now().strftime("%H_%M_%S") + ".log"
         with open(filename, "w") as file:
             file.write(current_time)
 
