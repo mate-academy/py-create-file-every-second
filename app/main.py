@@ -12,7 +12,6 @@ def main() -> None:
             f.write(timestamp_str)
 
         print(f"{timestamp_str} {file_name}")
-
         time.sleep(1)
 
 
