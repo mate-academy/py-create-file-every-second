@@ -1,47 +1,23 @@
 from datetime import datetime
 from time import sleep
-from typing import Optional
+import os
 
+try:
+    while True:
+        # Get current timestamp
+        timestamp = datetime.now()
 
-def create_log_files(
-    loop_limit: Optional[int] = None,
-    output_dir: str = "."
-) -> None:
+        # Format file name
+        file_name = f"app-{timestamp.hour}_{timestamp.minute}_{timestamp.second}.log"
 
-    """Create log files with a timestamp in an optional limited loop."""
-    try:
-        loop_count = 0
-        while loop_limit is None or loop_count < loop_limit:
-            # Get the current timestamp
-            current_time = datetime.now()
+        # Write the timestamp to the file
+        with open(file_name, "w") as file:
+            file.write(str(timestamp))
 
-            # Format the file name in multiple lines to avoid long line
-            file_name = (
-                f"{output_dir}/app-"
-                f"{current_time.hour}_"
-                f"{current_time.minute}_"
-                f"{current_time.second}.log"
-            )
+        # Print the output to console
+        print(f"{timestamp} {file_name}")
 
-            # Write the timestamp into the file
-            with open(file_name, "w") as file:
-                file.write(str(current_time))
-
-            # Print the timestamp and file name to the console
-            print(f"{current_time} {file_name}")
-
-            # Wait for 1 second
-            sleep(1)
-            loop_count += 1
-
-    except KeyboardInterrupt:
-        print("\nProcess terminated by user.")
-
-
-def main() -> None:
-    """Main entry point of the application."""
-    create_log_files()
-
-
-if __name__ == "__main__":
-    main()
+        # Wait for 1 second
+        sleep(1)
+except KeyboardInterrupt:
+    print("\nProcess terminated by user.")
