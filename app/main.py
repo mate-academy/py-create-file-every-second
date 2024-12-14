@@ -9,7 +9,6 @@ while True:
     file_name = current_time.strftime("app-%H_%M_%S.log")
     timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S.%f")
 
-    # Create and write to the file
     with open(file_name, "w") as f:
         f.write(timestamp)
 
