@@ -1,6 +1,5 @@
 from datetime import datetime
 from time import sleep
-import os
 
 try:
     while True:
@@ -8,7 +7,9 @@ try:
         timestamp = datetime.now()
 
         # Format file name
-        file_name = f"app-{timestamp.hour}_{timestamp.minute}_{timestamp.second}.log"
+        file_name = (
+            f"app-{timestamp.hour}_{timestamp.minute}_{timestamp.second}.log"
+        )
 
         # Write the timestamp to the file
         with open(file_name, "w") as file:
