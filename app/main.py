@@ -21,4 +21,4 @@ try:
         # Wait for 1 second
         sleep(1)
 except KeyboardInterrupt:
-    print("\nProcess terminated by user.")
+    print("\nProcess terminated by user."
