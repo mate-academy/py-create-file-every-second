@@ -9,7 +9,7 @@ def main() -> None:
         file_name = currency_date.strftime("app-%H_%M_%S.log")
         with open(file_name, "w") as file:
             file.write(file_content)
-        print(f"Create file {file_name} succesfully")
+        print(f"{file_content} {file_name}")
         sleep(1)
 
 
