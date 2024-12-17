@@ -2,7 +2,7 @@ from datetime import datetime
 import time
 
 
-def main():
+def main() -> None:
     while True:
         now = datetime.now()
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
@@ -13,6 +13,7 @@ def main():
 
         print(f"{timestamp} {filename}")
         time.sleep(1)
+
 
 if __name__ == "__main__":
     main()
