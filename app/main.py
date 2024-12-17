@@ -7,7 +7,8 @@ def main() -> None:
         current_time = datetime.now()
         timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S")
 
-        filename = (f"app-{current_time.hour}"
+        filename = (f"app"
+                    f"-{current_time.hour}"
                     f"_{current_time.minute}"
                     f"_{current_time.second}.log")
 
