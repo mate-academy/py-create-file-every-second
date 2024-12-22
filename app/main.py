@@ -1,6 +1,6 @@
-# app/main.py
 from datetime import datetime
 from time import sleep
+
 
 def create_file() -> None:
     """
@@ -14,6 +14,7 @@ def create_file() -> None:
             log_file.write(timestamp)
         print(f"{timestamp} {file_name}")
         sleep(1)
+
 
 if __name__ == "__main__":
     create_file()

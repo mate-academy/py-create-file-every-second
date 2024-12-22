@@ -1,8 +1,8 @@
-# tests/test_main.py
 import pytest
 from unittest.mock import patch
 from app.main import create_file
 import os
+
 
 # Fixture to clean up files after the test
 @pytest.fixture
@@ -14,6 +14,7 @@ def clean_up_files() -> None:
     for log_file in os.listdir():
         if log_file.startswith("app-") and log_file.endswith(".log"):
             os.remove(log_file)
+
 
 def test_create_file(clean_up_files: None) -> None:
     """
