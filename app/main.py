@@ -1,13 +1,16 @@
-import time
 from datetime import datetime
+from time import sleep
+import os
 
-while True:
-    now = datetime.now()
-    file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
+def create_file():
+    while True:
+        now = datetime.now()
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S.%f")
+        file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        with open(file_name, 'w') as f:
+            f.write(timestamp)
+        print(f"{timestamp} {file_name}")
+        sleep(1)
 
-    with open(file_name, "w") as f:
-        f.write(now.isoformat())
-
-    print(f"{now} {file_name}")
-
-    time.sleep(1)
+if __name__ == "__main__":
+    create_file()
