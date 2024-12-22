@@ -6,7 +6,8 @@ while True:
     current_time = datetime.now()
 
     # Format the filename based on current time
-    file_name = f"app-{current_time.hour}_{current_time.minute}_{current_time.second}.log"
+    file_name = (f"app-{current_time.hour}_{current_time.minute}_"
+                 f"{current_time.second}.log")
 
     # Open the file in write mode and write the timestamp
     with open(file_name, "w") as file:
