@@ -1,6 +1,7 @@
 from datetime import datetime
 from time import sleep
 
+
 def create_file() -> None:
     while True:
         now = datetime.now()
@@ -10,6 +11,7 @@ def create_file() -> None:
             f.write(timestamp)
         print(f"{timestamp} {file_name}")
         sleep(1)
+
 
 if __name__ == "__main__":
     create_file()
