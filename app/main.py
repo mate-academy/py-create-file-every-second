@@ -2,18 +2,18 @@ from datetime import datetime
 import time
 
 while True:
-    # Get current timestamp
+    # Get the current timestamp
     current_time = datetime.now()
 
-    # Format the filename and the timestamp
-    file_name = current_time.strftime("app-%H_%M_%S.log")
-    timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S.%f")
+    # Format the filename based on current time
+    file_name = f"app-{current_time.hour}_{current_time.minute}_{current_time.second}.log"
 
-    with open(file_name, "w") as f:
-        f.write(timestamp)
+    # Open the file in write mode and write the timestamp
+    with open(file_name, "w") as file:
+        file.write(current_time.isoformat())
 
-    # Print the timestamp and the newly created file name
-    print(f"{timestamp} {file_name}")
+    # Print the timestamp and the file name
+    print(f"{current_time.isoformat()} {file_name}")
 
-    # Wait for 1 second before the next iteration
+    # Wait for 1 second before creating the next file
     time.sleep(1)
