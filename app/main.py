@@ -10,18 +10,14 @@ def main():
             minutes = current_time.minute
             seconds = current_time.second
             file_name = f"app-{hours}_{minutes}_{seconds}.log"
-            
-            file = open(file_name, "w")
-            file.write(str(current_time))
-            file.close()
-            
+            new_file = open(file_name, "w")
+            new_file.write(str(current_time))
+            new_file.close()
             print(current_time, file_name)
-            
             sleep(1)
         except KeyboardInterrupt:
             print("----\nProcess terminated by user.")
             break
-        # comment
 
 
 if __name__ == "__main__":
