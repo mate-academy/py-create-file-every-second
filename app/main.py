@@ -18,9 +18,8 @@ def main():
             print(current_time, file_name)
             
             sleep(1)
-        
         except KeyboardInterrupt:
-            print("---------------------------------\nProcess terminated by user.")
+            print("----\nProcess terminated by user.")
             break
 
 
