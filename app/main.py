@@ -16,8 +16,7 @@ def main() -> None:
             print(current_time, file_name)
             sleep(1)
         except KeyboardInterrupt:
-            print("----\nProcess terminated by user.")
-            break
+            raise ("Process terminated be User.")
 
 
 if __name__ == "__main__":
