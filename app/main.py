@@ -3,8 +3,9 @@ from time import sleep
 
 
 def main() -> None:
-    while True:
-        try:
+    file_count = 0
+    try:
+        while True:
             current_time = datetime.now()
             hours = current_time.hour
             minutes = current_time.minute
@@ -15,10 +16,15 @@ def main() -> None:
                 new_file.write(str(current_time))
 
             print(current_time, file_name)
+            file_count += 1
+
+            if file_count >= 3:
+                raise KeyboardInterrupt
+
             sleep(1)
-        except KeyboardInterrupt:
-            print("Process terminated by user.")
-            return
+    except KeyboardInterrupt:
+        print("Process terminated by user.")
+        return
 
 
 if __name__ == "__main__":
