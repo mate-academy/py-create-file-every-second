@@ -23,8 +23,7 @@ def main() -> None:
 
             sleep(1)
     except KeyboardInterrupt:
-        print("Process terminated by user.")
-        return
+        raise KeyboardInterrupt("Process terminated by user.")
 
 
 if __name__ == "__main__":
