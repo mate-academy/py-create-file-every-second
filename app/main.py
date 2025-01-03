@@ -2,7 +2,7 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
 
-def main():
+def main() -> None:
     while True:
         now = datetime.now()
         name_file = f"app-{now.hour}_{now.minute}_{now.second}.log"
