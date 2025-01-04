@@ -1,36 +1,23 @@
-# app/main.py
+import os
+import time
 from datetime import datetime
-from time import sleep
 
+# Ensure the folder for files exists
+output_folder = "generated_files"
+os.makedirs(output_folder, exist_ok=True)
 
-def create_file() -> None:
-    """
-    This function creates a file with a timestamp every second.
-    The filename depends on the current time.
-    """
+try:
     while True:
-        # Get the current time
-        now = datetime.now()
-        timestamp = now.strftime("%Y-%m-%d %H:%M:%S.%f")
-        file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        # Generate a unique filename
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+        filename = f"file_{timestamp}.txt"
+        filepath = os.path.join(output_folder, filename)
 
-        # Write the timestamp to the file
-        with open(file_name, "w") as log_file:
-            log_file.write(timestamp)
+        # Create the file and write the current timestamp into it
+        with open(filepath, "w") as file:
+            file.write(f"File created at: {datetime.now()}\n")
 
-        # Print information about the created file
-        print(f"{timestamp} -> {file_name}")
-
-        # Wait 1 second before creating the next file
-        sleep(1)
-
-
-def main() -> None:
-    """
-    Main function to start the file creation process.
-    """
-    create_file()
-
-
-if __name__ == "__main__":
-    main()
+        print(f"Created file: {filename}")
+        time.sleep(1)  # 1-second delay
+except KeyboardInterrupt:
+    print("Program stopped.")
