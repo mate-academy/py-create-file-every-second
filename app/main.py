@@ -3,22 +3,13 @@ import time
 
 
 def main() -> None:
-    try:
-        while True:
-            # Get the current timestamp
-            current_time = datetime.now()
-            # Format the filename as specified
-            filename = (f"app-{current_time.hour}_{current_time.minute}_"
-                        f"{current_time.second}.log")
-            # Create and write to the file
-            with open(filename, "w") as file:
-                file.write(f"{current_time}")
-            # Print the console message
-            print(f"{current_time} {filename}")
-            # Sleep for 1 second
-            time.sleep(1)
-    except KeyboardInterrupt:
-        print("Process terminated.")
+    while True:
+        now = datetime.now()
+        name_file = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        with open(name_file, "w") as file:
+            file.write(now.strftime("%Y-%m-%d %H:%M:%S"))
+        print(f"{now} {name_file}")
+        time.sleep(1)
 
 
 if __name__ == "__main__":
