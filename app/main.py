@@ -1,23 +1,24 @@
 import os
-import time
 from datetime import datetime
-
-# Ensure the folder for files exists
-output_folder = "generated_files"
-os.makedirs(output_folder, exist_ok=True)
+from time import sleep
 
 try:
     while True:
-        # Generate a unique filename
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-        filename = f"file_{timestamp}.txt"
-        filepath = os.path.join(output_folder, filename)
+        # Get the current timestamp
+        now = datetime.now()
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S.%f")
 
-        # Create the file and write the current timestamp into it
-        with open(filepath, "w") as file:
-            file.write(f"File created at: {datetime.now()}\n")
+        # Generate the file name
+        file_name = f"app-{now.strftime('%H_%M_%S')}.log"
 
-        print(f"Created file: {filename}")
-        time.sleep(1)  # 1-second delay
+        # Write the timestamp to the file
+        with open(file_name, "w") as file:
+            file.write(timestamp)
+
+        # Print success message to the console
+        print(f"Created file: {file_name} with timestamp: {timestamp}")
+
+        # Wait for 1 second
+        sleep(1)
 except KeyboardInterrupt:
-    print("Program stopped.")
+    print("\nProgram terminated.")
