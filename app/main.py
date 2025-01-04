@@ -1,18 +1,20 @@
-import time
+from datetime import datetime
+from time import sleep
 
+while True:
+    # Get the current timestamp
+    now = datetime.now()
+    timestamp = now.strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
 
-def create_file() -> None:
-    while True:
-        current_time = time.localtime()
-        timestamp = time.strftime("%Y-%m-%d %H:%M:%S.%f", current_time)
-        file_name = {
-            f"app{current_time.hour}_{current_time.min}_{current_time.sec}.log"
-        }
-        with open(file_name, "w") as f:
-            f.write(timestamp)
-        print(f"{timestamp} {file_name}")
-        time.sleep(1)
+    # Create the file name
+    file_name = f"app-{now.hour}_{now.min}_{now.sec}.log"
 
+    # Write the timestamp to the file
+    with open(file_name, "w") as file:
+        file.write(timestamp)
 
-if __name__ == "__main__":
-    create_file()
+    # Print the timestamp and file name
+    print(f"{timestamp} {file_name}")
+
+    # Wait for 1 second
+    sleep(1)
