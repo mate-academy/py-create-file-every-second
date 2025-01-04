@@ -1,23 +1,16 @@
-from datetime import datetime
 from time import sleep
 
-try:
+
+def create_file() -> None:
     while True:
-        # Get the current timestamp
         now = datetime.now()
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S.%f")
-
-        # Generate the file name
-        file_name = f"app-{now.strftime('%H_%M_%S')}.log"
-
-        # Write the timestamp to the file
-        with open(file_name, "w") as file:
-            file.write(timestamp)
-
-        # Print success message to the console
-        print(f"Created file: {file_name} with timestamp: {timestamp}")
-
-        # Wait for 1 second
+        file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        with open(file_name, "w") as f:
+            f.write(timestamp)
+        print(f"{timestamp} {file_name}")
         sleep(1)
-except KeyboardInterrupt:
-    print("\nProgram terminated.")
+
+
+if __name__ == "__main__":
+    create_file()
