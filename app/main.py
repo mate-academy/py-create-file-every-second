@@ -2,7 +2,7 @@ from datetime import datetime
 import time
 
 
-def main():
+def main() -> None:
 
     while True:
         now = datetime.now()
