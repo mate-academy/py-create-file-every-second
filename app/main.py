@@ -12,7 +12,7 @@ def print_file(date: str, filename: str) -> None:
 def main() -> None:
     while True:
         current_time = datetime.now()
-        file_name = f"app-{current_time.strftime("%H_%M_%S")}.log"
+        file_name = (f"app-{current_time.strftime('%H_%M_%S')}.log")
         print_file(
             filename=file_name,
             date=f"{current_time}"
