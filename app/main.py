@@ -2,7 +2,7 @@ import time
 from datetime import datetime
 
 
-def main():
+def main() -> None:
     while True:
         now = datetime.now()
 
@@ -17,3 +17,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
