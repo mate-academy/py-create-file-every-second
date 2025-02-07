@@ -7,7 +7,7 @@ def main() -> None:
 
         this_time = datetime.now()
         timestamp = str(this_time)
-        file_name = f"app-{this_time.strftime("%H_%M_%S")}.log"
+        file_name = f"app-{this_time.strftime('%H_%M_%S')}.log"
 
         with open(file_name, "w") as f:
             f.write(timestamp)
