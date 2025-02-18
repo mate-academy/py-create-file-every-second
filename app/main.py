@@ -11,13 +11,12 @@ def main() -> None:
 
         filename = f"app-{hours}_{minutes}_{seconds}.log"
 
-        with open(filename, 'w') as f:
+        with open(filename, "w") as f:
             now = str(datetime.now())
             f.write(now)
             print(f"{now} {filename}")
 
         sleep(1)
-
 
 
 if __name__ == "__main__":
