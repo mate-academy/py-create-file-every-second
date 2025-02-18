@@ -1,3 +1,4 @@
+import os
 import asyncio
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 
@@ -11,4 +12,7 @@ async def main():
             print(f"{now.__str__()} {file_name}")
     
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print('Interrupted')
