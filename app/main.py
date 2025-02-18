@@ -8,8 +8,8 @@ async def main() -> None:
         now = datetime.now()
         file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
         with open(file_name, "w") as output_file:
-            output_file.write(f"{now.__str__().replace(":", "_")} {file_name}")
-            print(f"{now.__str__()} {file_name}")
+            line = f"{now.__str__().replace(":", "_")} {file_name}"
+            output_file.write(line)
 
 if __name__ == "__main__":
     asyncio.run(main())
