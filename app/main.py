@@ -10,5 +10,6 @@ def main() -> None:
         with open(file_name, "w") as output_file:
             output_file.write(f"{now.__str__().replace(':', '_')} {file_name}")
 
+
 if __name__ == "__main__":
     main()
