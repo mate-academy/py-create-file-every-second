@@ -5,7 +5,11 @@ from time import sleep
 def main() -> None:
     while True:
         timestamp = datetime.now()
-        file_name = f"app-{timestamp.strftime("%H_%M_%S")}.log"
+        file_name = (
+            f"app-{timestamp.hour}_"
+            f"{timestamp.minute}_"
+            f"{timestamp.second}.log"
+        )
 
         with open(file_name, "w") as new_file:
             new_file.write(str(timestamp))
