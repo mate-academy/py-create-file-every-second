@@ -1,25 +1,22 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
 from time import sleep
 
 
 def main() -> None:
     while True:
-        # Отримуємо поточний час
         now = datetime.now()
-        timestamp = now.strftime("%Y-%m-%d %H:%M:%S.%f")
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S")  # Видалено .%f
         filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
 
-        # Записуємо таймстемп у файл
-        with open(filename, "w") as file:
-            file.write(timestamp)
+        try:
+            with open(filename, "w") as file:
+                file.write(timestamp)
 
-        # Виводимо інформацію у консоль
-        print(timestamp, filename)
+            print(timestamp, filename)
+        except Exception as e:
+            print(f"Error creating file {filename}: {e}")
 
-        # Чекаємо 1 секунду перед наступною ітерацією
         sleep(1)
-    # write your code here
-    pass
 
 
 if __name__ == "__main__":
