@@ -6,8 +6,10 @@ def main() -> None:
     while True:
 
         now = datetime.now()
-        file_name = f"app-{now.strftime("%H_%M_%S")}.log"
         formatted_now = now.strftime("%Y-%m-%d %H:%M:%S")
+        file_name = (f"app-{datetime.now().hour}_"
+                     f"{datetime.now().minute}_"
+                     f"{datetime.now().second}.log")
 
         with open(file_name, "w") as file:
 
