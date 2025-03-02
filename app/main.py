@@ -7,9 +7,9 @@ def main() -> None:
 
         now = datetime.now()
         formatted_now = now.strftime("%Y-%m-%d %H:%M:%S")
-        file_name = (f"app-{datetime.now().hour}_"
-                     f"{datetime.now().minute}_"
-                     f"{datetime.now().second}.log")
+        file_name = (f"app-{now.hour}_"
+                     f"{now.minute}_"
+                     f"{now.second}.log")
 
         with open(file_name, "w") as file:
 
