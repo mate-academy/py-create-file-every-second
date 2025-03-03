@@ -8,7 +8,7 @@ def main() -> any:
         now = datetime.now()
         file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
         with open(file_name, "w") as f:
-            f.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")}")
+            f.write(now.strftime("%Y-%m-%d %H:%M:%S"))
 
         with open(file_name, "r") as f:
             print(f.read(), file_name)
