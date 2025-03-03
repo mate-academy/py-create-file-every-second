@@ -1,12 +1,14 @@
 import time
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
 
 
 def main() -> None:
 
     while True:
         date_now = datetime.now()
-        file_name = f"app-{date_now.hour}_{date_now.minute}_{date_now.second}.log"
+        file_name = (f"app-{date_now.hour}_"
+                     f"{date_now.minute}_"
+                     f"{date_now.second}.log")
         timestamp = date_now.strftime("%Y-%m-%d %H:%M:%S")
         with open(file_name, "w") as file:
             file.write(timestamp)
