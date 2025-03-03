@@ -6,8 +6,7 @@ from typing import Any
 def main() -> Any:
     while True:
         current_time = datetime.now()
-        file_name = (f"app-{current_time.hour}_"
-                     f"{current_time.minute}_"
+        file_name = (f"app-{current_time.hour}_{current_time.minute}_"
                      f"{current_time.second}.log")
 
         with open(file_name, "w") as file:
