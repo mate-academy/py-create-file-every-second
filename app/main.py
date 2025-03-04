@@ -9,6 +9,7 @@ def main() -> None:
         with open(f"app-{d1.hour}_{d1.minute}_{d1.second}.log", "w") as f:
             f.write(f"{datetime.now()}")
         time.sleep(1)
+        print(f"{d1} app-{d1.hour}_{d1.minute}_{d1.second}.log")
 
 
 if __name__ == "__main__":
