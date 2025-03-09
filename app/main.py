@@ -1,7 +1,8 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 import time
 
-def main():
+
+def main() -> None:
     while True:
         now = datetime.now()
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
