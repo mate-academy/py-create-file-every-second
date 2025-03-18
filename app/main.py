@@ -4,12 +4,13 @@ import time
 
 def main() -> str:
     while True:
-        with open(f"app-"
-                  f"{datetime.now().strftime("%H_%M_%S")}.log", "w""") as f:
-            f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+        now = datetime.now()
+        now_name = now.strftime("%H_%M_%S")
+        now_text = now.strftime("%Y-%m-%d %H:%M:%S")
+        with open(f"app-{now_name}.log", "w""") as f:
+            f.write(now_text)
 
-        print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-              f"app-{datetime.now().strftime("%H_%M_%S")}.log")
+        print(now_text, f"app-{now_name}.log")
         time.sleep(1)
     # write your code here
     pass
