@@ -4,7 +4,8 @@ import time
 
 def main() -> str:
     while True:
-        with open(f"app-{datetime.now().strftime('%H_%M_%S')}.log", "w") as f:
+        with open(f"app-"
+                  f"{datetime.now().strftime("%H_%M_%S")}.log", "w""") as f:
             f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
         print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
