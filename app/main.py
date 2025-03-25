@@ -8,7 +8,7 @@ def main() -> None:
         with open(f"app-{time_now.hour}_"
                   f"{time_now.minute}_"
                   f"{time_now.second}.log", "w") as f:
-            print(f"{time_now.strftime("%Y-%m-%d %H:%M:%S")}"
+            print(f"{time_now.strftime('%Y-%m-%d %H:%M:%S')}"
                   f" app-{time_now.hour}_{time_now.minute}_"
                   f"{time_now.second}.log")
             f.write(time_now.strftime("%Y-%m-%d %H:%M:%S"))
