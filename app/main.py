@@ -7,7 +7,7 @@ def main() -> None:
         current_datetime = datetime.now()
         current_date = current_datetime.date().strftime("%Y-%m-%d")
         current_time = current_datetime.time().strftime("%H:%M:%S")
-        file_name = f"app-{current_datetime.time().strftime("%H_%M_%S")}.log"
+        file_name = f"app-{current_datetime.time().strftime('%H_%M_%S')}.log"
 
         timestamp = f"{current_date} {current_time}"
         with open(file_name, "w") as file:
