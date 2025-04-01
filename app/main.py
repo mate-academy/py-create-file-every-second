@@ -5,14 +5,12 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 def main() -> None:
     while True:
         now = datetime.now()
-        hours = now.hour
-        minutes = now.minute
-        seconds = now.second
-        file_name = f"app-{hours}_{minutes}_{seconds}.log"
+        file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
         with open(file_name, "w") as file:
-            file.write(now.strftime("%Y-%m-%d %H:%M:%S"))
-            print(file_name)
-        time.sleep(1)
+            file.write(timestamp)
+            print(f"{timestamp} {file_name}")
+            time.sleep(1)
 
 
 if __name__ == "__main__":
