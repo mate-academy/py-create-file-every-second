@@ -6,7 +6,7 @@ def main() -> None:
     # file_name = datetime.now()
     while True:
         now = datetime.now()
-        file_name = f"app-{now.strftime("%H_%M_%S")}.log"
+        file_name = (f"app-{now.strftime("%H_%M_%S")}.log")
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
 
         with open(file_name, "w") as file:
