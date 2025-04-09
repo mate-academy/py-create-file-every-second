@@ -6,7 +6,7 @@ def main() -> None:
     while True:
         now = datetime.now()
         ft = now.strftime("%Y-%m-%d %H:%M:%S")
-        file_name = f"app-{now.strftime("%H_%M_%S")}.log"
+        file_name = f'app-{now.strftime("%H_%M_%S")}.log'
         with open(file_name, "w") as file:
             file.write(f"{ft}")
             print(f"{ft} {file_name}")
