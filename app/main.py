@@ -1,10 +1,15 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
-
+from datetime import datetime
+import time
 
 def main():
-    # write your code here
-    pass
-
+    while True:
+        now = datetime.now()
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+        filename = now.strftime("app-%H_%M_%S.log")
+        with open(filename, "w") as f:
+            f.write(timestamp)
+        print(f"{timestamp} {filename}")
+        time.sleep(1)
 
 if __name__ == "__main__":
     main()
