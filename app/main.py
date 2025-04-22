@@ -11,6 +11,7 @@ def main() -> None:
         timestamp_content = current_time.strftime("%Y-%m-%d %H:%M:%S")
         with open(file_name, "w") as file:
             file.write(timestamp_content)
+        print(f"{timestamp_content} {file_name}")
         sleep(1)
 
 
