@@ -7,10 +7,8 @@ def main() -> None:
         data = datetime.now()
         name_file = f"app-{data.hour}_{data.minute}_{data.second}.log"
         with open(name_file, "w") as f:
-            f.write(f"{data.date()} "
-                    f"{data.strftime("%H:%M:%S")}")
-            print(f"{data.date()} "
-                  f"{data.strftime("%H:%M:%S")} {f.name}")
+            f.write(f"{data.date()} {data.strftime("%H:%M:%S")}")
+            print(f"{data.date()} {data.strftime("%H:%M:%S")} {f.name}")
         time.sleep(1)
 
 
