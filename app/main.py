@@ -7,7 +7,7 @@ def main() -> None:
     while True:
         now = datetime.now()
         time_stamp = now.strftime("%Y-%m-%d %H:%M:%S")
-        file_name = f"app-{now.strftime("%H_%M_%S")}.log"
+        file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
         file_path = os.path.join(os.getcwd(), file_name)
 
         try:
