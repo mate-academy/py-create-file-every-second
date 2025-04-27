@@ -2,7 +2,7 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 import time
 
 
-def main():
+def main() -> None:
     while True:
         with open(f"app-{datetime.now().hour}"
                   f"_{datetime.now().minute}"
