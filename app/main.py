@@ -3,7 +3,7 @@ from time import sleep
 
 
 def main() -> None:
-   while True:
+    while True:
         current_time = datetime.now()
         formatted_time = current_time.strftime("%H_%M_%S")  # змінили формат
         filename = f"app-{formatted_time}.log"
