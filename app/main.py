@@ -2,14 +2,14 @@ from datetime import datetime
 from time import sleep
 
 
-def main() -> None:
+def main():
     while True:
         now = datetime.now()
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
         file_name = now.strftime("app-%H_%M_%S.log")
 
         with open(file_name, "w") as file:
-            file.write(timestamp + "\n")
+            file.write(timestamp)  # без \n
 
         print(f"{timestamp} {file_name}")
         sleep(1)
