@@ -10,7 +10,7 @@ def main() -> None:
                   f"{real_time.second}.log", "a") as file:
             file.write(str(real_time))
             print(str(real_time), f"app-{real_time.hour}"
-                                 f"_{real_time.minute}_"
+                                  f"_{real_time.minute}_"
                                   f"{real_time.second}.log")
             time.sleep(1)
 
