@@ -8,7 +8,7 @@ def main() -> None:
         minutes = datetime.now().minute
         seconds = datetime.now().second
         file_name = f"app-{hours}_{minutes}_{seconds}.log"
-        current_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+        current_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         with open(file_name, "w") as file:
             file.write(str(current_timestamp))
 
