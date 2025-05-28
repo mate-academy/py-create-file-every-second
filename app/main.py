@@ -11,7 +11,7 @@ def main() -> None:
 
         with open(file_name, "w") as log_file:
             file_content = (f"{str(now.date())} "
-                            f"{now.strftime("%X")}")
+                            f'{now.strftime("%X")}')
             log_file.write(file_content)
 
         print(f"{file_content} {file_name}")
