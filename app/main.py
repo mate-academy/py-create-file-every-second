@@ -1,6 +1,7 @@
 from datetime import datetime
 from time import sleep
 
+
 def main() -> None:
     while True:
         now = datetime.now()
@@ -14,6 +15,7 @@ def main() -> None:
 
         print(now.strftime("%Y-%m-%d %H:%M:%S"), filename)
         sleep(1)
+
 
 if __name__ == "__main__":
     main()
