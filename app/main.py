@@ -11,7 +11,8 @@ def main() -> None:
 
         with open(f"app-{hours}_{minutes}_{seconds}.log", "w") as f:
             f.write(f"2025-05-31 {hours}:{minutes}:{seconds}")
-        print(str(datetime.now()).split(".")[0], f"app-{hours}_{minutes}_{seconds}.log")
+        print(str(datetime.now()).split(".")[0],
+              f"app-{hours}_{minutes}_{seconds}.log")
         sleep(1)
 
 
