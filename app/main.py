@@ -1,20 +1,19 @@
 from datetime import datetime
 from time import sleep
 
-
 def main() -> None:
     while True:
-        date_now = str(datetime.now()).split()[-1].split(".")[0]
-        hours = date_now.split(":")[0]
-        minutes = date_now.split(":")[1]
-        seconds = date_now.split(":")[2]
+        now = datetime.now()
+        hours = now.strftime("%H")
+        minutes = now.strftime("%M")
+        seconds = now.strftime("%S")
 
-        with open(f"app-{hours}_{minutes}_{seconds}.log", "w") as f:
-            f.write(f"2025-05-31 {hours}:{minutes}:{seconds}")
-        print(str(datetime.now()).split(".")[0],
-              f"app-{hours}_{minutes}_{seconds}.log")
+        filename = f"app-{hours}_{minutes}_{seconds}.log"
+        with open(filename, "w") as f:
+            f.write(now.strftime("%Y-%m-%d %H:%M:%S"))
+
+        print(now.strftime("%Y-%m-%d %H:%M:%S"), filename)
         sleep(1)
-
 
 if __name__ == "__main__":
     main()
