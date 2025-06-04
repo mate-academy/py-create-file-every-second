@@ -9,7 +9,7 @@ def main() -> None:
         file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
         with open(file_name, "w") as file:
             file.write(now.strftime("%Y-%m-%d %H:%M:%S"))
-        print(f"{now.strftime("%Y-%m-%d %H:%M:%S")} {file_name}")
+        print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} {file_name}")
         time.sleep(1)
 
 
