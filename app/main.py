@@ -2,19 +2,18 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 import time
 
 
-def main():
-    # write your code here
-    pass
-def main() -> None:
+def main() -> None:  # Fixes ANN201 (missing return type)
+    # and F811 (redefinition)
+    # Your code goes here
     while True:
-        now = datetime.now()
-        timestamp_str = now.strftime("%Y-%m-%d %H:%M:%S")
-        file_name = now.strftime("app-%H_%M_%S.log")
+        current_time = datetime.now()
+        timestamp_string = current_time.strftime("%Y-%m-%d %H:%M:%S")
+        file_name = current_time.strftime("app-%H_%M_%S.log")
 
         with open(file_name, "w") as file:
-            file.write(timestamp_str)
+            file.write(timestamp_string)
 
-        print(f"{timestamp_str} {file_name}")
+        print(f"{timestamp_string} {file_name}")
         time.sleep(1)
 
 
