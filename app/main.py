@@ -9,11 +9,10 @@ def main() -> None:
         file_name = current_time.strftime("app-%H_%M_%S.log")
 
         with open(file_name, "w") as file:
-            file.write(timestamp_string)	
+            file.write(timestamp_string)
 
         print(f"{timestamp_string} {file_name}")
         time.sleep(1)
-    
-
+        
 if __name__ == "__main__":
     main()
