@@ -2,9 +2,7 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 import time
 
 
-def main() -> None:  # Fixes ANN201 (missing return type)
-    # and F811 (redefinition)
-    # Your code goes here
+def main() -> None:
     while True:
         current_time = datetime.now()
         timestamp_string = current_time.strftime("%Y-%m-%d %H:%M:%S")
