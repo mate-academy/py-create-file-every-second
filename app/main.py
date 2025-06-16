@@ -13,6 +13,7 @@ def main() -> None:
 
         print(f"{timestamp_string} {file_name}")
         time.sleep(1)
-        
+
+
 if __name__ == "__main__":
     main()
