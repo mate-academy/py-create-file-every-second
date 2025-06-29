@@ -1,25 +1,26 @@
 from datetime import datetime
 import time
-import keyboard
 
 
 def main() -> None:
-    while True:
-        hours = datetime.now().hour
-        minutes = datetime.now().minute
-        seconds = datetime.now().second
-        year = datetime.now().year
-        mohth = datetime.now().month
-        day = datetime.now().day
-        file_name = f"app-{hours}_{minutes}_{seconds}.log"
-        text = f"{year}-{mohth}-{day} {hours}:{minutes}:{seconds}"
-        print(text, file_name)
-        time.sleep(1)
-        with open(file_name, "w") as file:
-            file.write(text)
-        if keyboard.is_pressed("esc"):
-            print("Process completed")
-            break
+    try:
+        while True:
+            now = datetime.now()
+            hours = now.hour
+            minutes = now.minute
+            seconds = now.second
+            year = now.year
+            month = now.month
+            day = now.day
+            file_name = f"app-{hours}_{minutes}_{seconds}.log"
+            text = (f"{year}-{month}-{day} "
+                    f"{hours}:{minutes}:{seconds}")
+            print(text, file_name)
+            with open(file_name, "w") as file:
+                file.write(text)
+                time.sleep(1)
+    except KeyboardInterrupt:
+        print("Process completed")
 
 
 if __name__ == "__main__":
