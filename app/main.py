@@ -9,7 +9,7 @@ def main() -> None:
         file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
         fin = open(file_name, "w")
 
-        content = f"{now.date()} {now.time().strftime("%H:%M:%S")}"
+        content = f"{now.date()} {now.time()}"
         fin.write(content)
 
         fin.close()
