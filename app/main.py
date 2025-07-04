@@ -2,7 +2,8 @@ from datetime import datetime
 import time
 import sys
 
-def main():
+
+def main() -> None:
     # - File name must be in the following format:
     # `app-{hours}_{minutes}_{seconds}.log`.
     # - File content must be a timestamp of this
@@ -15,7 +16,8 @@ def main():
     while True:
         try:
             current_time = datetime.now()
-            filename = f"app-{current_time.hour}_{current_time.minute}_{current_time.second}.log"
+            filename = (f"app-{current_time.hour}_"
+                        f"{current_time.minute}_{current_time.second}.log")
             timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S")
 
             with open(filename, "w") as file:
