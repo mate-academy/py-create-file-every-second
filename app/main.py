@@ -7,7 +7,7 @@ def main() -> None:
         now = datetime.now()
         log_format = f"app-{now.hour}_{now.minute}_{now.second}.log"
 
-        with open(format, "w") as file:
+        with open(log_format, "w") as file:
             file.write(str(now))
         print(f"{now} {log_format}")
         sleep(1)
