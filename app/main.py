@@ -5,10 +5,11 @@ from time import sleep
 def main() -> None:
     while True:
         now = datetime.now()
-        round(now.second)
+        now = now.replace(microsecond=0)
         file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
         with open(file_name, "w+") as f:
             f.write(f"{now}")
+            f.seek(0)
             print(f.read(), file_name)
             sleep(1)
 
