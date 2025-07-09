@@ -1,9 +1,8 @@
-
 from datetime import datetime
 from time import sleep
 
 
-def main():
+def main() -> None:
     """Create a file every second with timestamp."""
     while True:
         # Get current timestamp
