@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 import time
 
 
@@ -19,6 +19,6 @@ def main() -> None:
 
         time.sleep(1)
 
+
 if __name__ == "__main__":
     main()
-#2020-01-01 14:10:09 app-14_10_9.log
