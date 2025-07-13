@@ -4,11 +4,13 @@ from time import sleep
 
 def main() -> None:
     while True:
-        now = datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S")
+        now = str(datetime.now())
         hrs, mins, secs = now.split()[1].split(":")
-        secs = secs if secs[0] != "0" else secs[1]
-        with open(f"app-{hrs}_{mins}_{secs}.log", "w") as f:
+        secs = secs[:2]
+        fname = f"app-{hrs}_{mins}_{secs}.log"
+        with open(fname, "w") as f:
             f.write(now)
+        print(now, fname)
         sleep(1)
 
 
