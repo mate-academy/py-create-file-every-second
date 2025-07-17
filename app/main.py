@@ -1,6 +1,7 @@
 import time
 from datetime import datetime
 
+
 def main() -> None:
     while True:
         date_now = datetime.now().strftime("%Y-%m-%d")
