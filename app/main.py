@@ -1,16 +1,16 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
-from fileinput import close
-from time import sleep, strftime
+from time import sleep
 
 
 def main() -> None:
     while True:
         now = datetime.now()
         filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
-        timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+        timestamp = now.strftime(f"%Y-%m-%d "
+                                 f"{now.hour} : {now.minute} : {now.second}")
         with open(filename, "w") as f:
             f.write(timestamp)
-            print(f"{timestamp} {filename}")
+        print(f"{timestamp} {filename}")
         sleep(1)
 
 
