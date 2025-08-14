@@ -3,7 +3,7 @@ from time import sleep
 import os
 
 
-def main():
+def main() -> None:  # Adicionei o tipo de retorno
     while True:
         now = datetime.now()
 
