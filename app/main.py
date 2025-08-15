@@ -8,11 +8,10 @@ def main() -> None:
         filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
         content = now.strftime("%Y-%m-%d %H:%M:%S")
 
-        with open(f"app/{filename}", "w") as log_file:
+        with open(f"{filename}", "w") as log_file:
             log_file.write(content)
 
-        with open(f"app/{filename}", "r") as log_file:
-            print(f"{log_file.read()} {filename}")
+        print(f"{content} {filename}")
 
         sleep(1)
 
