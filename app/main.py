@@ -12,8 +12,7 @@ def main() -> None:
 
         print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} {file_name}")
 
-        if not test_mode:
-            sleep(1)
+        sleep(1)
 
 
 if __name__ == "__main__":
