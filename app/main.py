@@ -1,7 +1,8 @@
 from datetime import datetime
 from time import sleep
 
-def main(test_mode=False):
+
+def main() -> None:
     while True:
         now = datetime.now()
         file_name = f"app-{now:%H_%M_%S}.log"
