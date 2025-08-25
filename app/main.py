@@ -6,9 +6,10 @@ def main() -> None:
 
     while True:
         time = datetime.now()
-        with open(f"app-{time.strftime('%H_%M_%S')}.log", "w") as logfile:
-            logfile.write(f"{time.date()} {time.strftime('%H:%M:%S')}")
-        print(f"{time.date()} {time.strftime('%H:%M:%S')} app-{time.strftime('%H_%M_%S')}.log")
+        with open(f"app-{time.strftime("""%H_%M_%S""")}.log", "w") as logfile:
+            logfile.write(f"{time.date()} {time.strftime("""%H:%M:%S""")}")
+        print(f"{time.date()} {time.strftime("""%H:%M:%S""")} "
+              f"app-{time.strftime("""%H_%M_%S""")}.log")
         sleep(1)
 
 
