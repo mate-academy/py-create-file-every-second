@@ -3,13 +3,14 @@ from time import sleep
 
 
 def main() -> None:
-    while True:
 
+    while True:
         time = datetime.now()
-        filename = f"app-{time.strftime(format="%H_%M_%S")}.log"
-        with open(filename, "w") as logfile:
+        with (open(f"app-{time.strftime(format="%H_%M_%S")}.log", "w")
+              as logfile):
             logfile.write(f"{time.date()} {time.strftime(format="%H:%M:%S")}")
-        print(f"{time.date()} {time.strftime(format="%H:%M:%S")} {filename}")
+        print(f"{time.date()} {time.strftime(format="%H:%M:%S")} "
+              f"{f"app-{time.strftime(format="%H_%M_%S")}.log"}")
         sleep(1)
 
 
