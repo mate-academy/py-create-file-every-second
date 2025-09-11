@@ -1,18 +1,21 @@
-from datetime import datetime
+from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
-while True:
-    now = datetime.now()
-    timestamp_str = now.strftime("%Y-%m-%d %H:%M:%S")
-    # é um metodo que transforma esse objeto datetime em uma string formatada.
-    file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
 
-    with open(file_name, "w") as f:
-        f.write(timestamp_str)
+def main() -> None:
+    while True:
+        now = datetime.now()
+        timestamp_str = now.strftime("%Y-%m-%d %H:%M:%S")
+        # é um metodo que transforma esse objeto
+        # datetime em uma string formatada.
+        file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
 
-    print(f"{timestamp_str} {file_name}")
+        with open(file_name, "w") as f:
+            f.write(timestamp_str)
 
-    sleep(1)
+        print(f"{timestamp_str} {file_name}")
+
+        sleep(1)
 
 
 if __name__ == "__main__":
