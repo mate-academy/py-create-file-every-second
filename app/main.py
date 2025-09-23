@@ -1,25 +1,30 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
-
+import os
 
 def main():
-    while True:
-        # Отримуємо поточний час
-        now = datetime.now()
+    # Створюємо папку logs, якщо її немає
+    os.makedirs("logs", exist_ok=True)
 
-        # Формуємо ім'я файлу
-        filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
+    try:
+        while True:
+            now = datetime.now()
 
-        # Записуємо timestamp у файл
-        with open(filename, "w") as f:
-            f.write(now.strftime("%Y-%m-%d %H:%M:%S"))
+            # Формуємо унікальне ім'я файлу за година_хвилина_секунда
+            filename = f"logs/app-{now.hour}_{now.minute}_{now.second}.log"
 
-        # Вивід у консоль
-        print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} {filename}")
+            # Записуємо timestamp у файл
+            with open(filename, "w") as f:
+                f.write(now.strftime("%Y-%m-%d %H:%M:%S"))
 
-        # Чекаємо 1 секунду
-        sleep(1)
+            # Вивід у консоль
+            print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} {filename}")
 
+            # Чекаємо 1 секунду перед створенням наступного файлу
+            sleep(1)
+
+    except KeyboardInterrupt:
+        print("\nProgram stopped by user.")
 
 if __name__ == "__main__":
     main()
