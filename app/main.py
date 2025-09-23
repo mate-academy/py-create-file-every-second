@@ -1,6 +1,7 @@
 from datetime import datetime
 import time
 
+
 def main() -> None:
     try:
         while True:
@@ -12,7 +13,6 @@ def main() -> None:
 
             print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} {filename}")
             time.sleep(1)  # Просто sleep(1) у звичайному режимі
-
     except KeyboardInterrupt:
-        print('Stopped!')
+        print("Stopped!")
         pass
