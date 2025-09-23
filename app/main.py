@@ -7,7 +7,7 @@ def main():
         # Отримуємо поточний час
         now = datetime.now()
 
-        # Формуємо ім'я файлу
+        # Формуємо ім'я файлу без папки і без мікросекунд
         filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
 
         # Записуємо timestamp у файл
