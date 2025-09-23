@@ -1,11 +1,13 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from time import sleep
 
 
 def main():
     while True:
-        now = datetime.now()  # тест підставляє mock-дату
+        # Отримуємо поточний час
+        now = datetime.now()
 
-        # Створюємо файл строго за форматом
+        # Формуємо ім'я файлу
         filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
 
         # Записуємо timestamp у файл
@@ -14,3 +16,11 @@ def main():
 
         # Вивід у консоль
         print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} {filename}")
+
+        # Чекаємо 1 секунду
+        sleep(1)
+
+
+if __name__ == "__main__":
+    main()
+
