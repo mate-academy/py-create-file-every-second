@@ -1,8 +1,9 @@
 from datetime import datetime
 from time import sleep
+from typing import Tuple, Optional
 
 
-def create_and_log_file():
+def create_and_log_file() -> Tuple[bool, Optional[str], Optional[str]]:
     """
     Cria um arquivo com timestamp no nome e no conteúdo.
     Imprime o nome do arquivo e o timestamp no console.
@@ -21,7 +22,7 @@ def create_and_log_file():
         return False, None, None
 
 
-def main():
+def main() -> None:
     """
     Executa a função de criação de arquivo a cada segundo, indefinidamente.
     """
@@ -30,6 +31,5 @@ def main():
         sleep(1)
 
 
-# Este bloco só executa o código se o script for rodado diretamente
 if __name__ == "__main__":
     main()
