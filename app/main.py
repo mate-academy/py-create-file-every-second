@@ -9,8 +9,8 @@ def main() -> None:
 {time_now.minute}_{time_now.second}.log"
         with open(file_name, "w") as file:
             file.write(time_now.isoformat(" ", "seconds"))
-            file.close()
-        print(f"{time_now.isoformat(" ", "seconds")} {file_name}")
+        time_mark = time_now.isoformat(" ", "seconds")
+        print(f"{time_mark} {file_name}")
         sleep(1)
 
 
