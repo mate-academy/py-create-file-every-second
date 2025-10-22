@@ -6,10 +6,11 @@ def main() -> None:
     while True:
         now = datetime.now()
         content = now.strftime("%Y-%m-%d %H:%M:%S")
-        with open(f"app-{now.strftime("%H_%M_%S")}.log", "w") as f:
+        content1 = now.strftime("%H_%M_%S")
+        with open(f"app-{content1}.log", "w") as f:
             f.write(content)
-            print(content + f" app-{now.strftime("%H_%M_%S")}.log")
-            sleep(1)
+            print(content + f" app-{content1}.log")
+        sleep(1)
 
 
 if __name__ == "__main__":
