@@ -10,25 +10,20 @@ def main() -> None:
     and the file content is the full timestamp.
     """
     while True:
-        try:
-            now = datetime.now()
+        # Ми прибрали блок try...except KeyboardInterrupt
+        # Тепер помилка переривання не буде "зловлена" всередині функції
+        now = datetime.now()
 
-            file_name = (
-                f"app-{now.hour}_{now.minute}_{now.second}.log"
-            )
+        file_name = (
+            f"app-{now.hour}_{now.minute}_{now.second}.log"
+        )
 
-            timestamp_content = now.strftime("%Y-%m-%d %H:%M:%S")
+        timestamp_content = now.strftime("%Y-%m-%d %H:%M:%S")
 
-            with open(file_name, "w") as f:
-                f.write(timestamp_content)
+        with open(file_name, "w") as f:
+            f.write(timestamp_content)
 
-            print(f"{timestamp_content} {file_name}")
-
-        except IOError as e:
-            print(f"Error writing file: {e}")
-        except KeyboardInterrupt:
-            print("\nApp terminated by user.")
-            break
+        print(f"{timestamp_content} {file_name}")
 
         time.sleep(1)
 
