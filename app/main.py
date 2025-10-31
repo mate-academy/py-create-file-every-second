@@ -2,7 +2,7 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 import time
 
 
-def main(sleep_enabled=True):
+def main(sleep_enabled: bool = True) -> None:
     while True:
         try:
             now = datetime.now()
