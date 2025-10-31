@@ -12,4 +12,3 @@ while True:
 
     print(timestamp, file_name)
     sleep(1)
-
