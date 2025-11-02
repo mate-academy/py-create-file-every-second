@@ -1,6 +1,7 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 import time
 
+
 def main() -> None:
     while True:
         now = datetime.now().replace(microsecond=0)
