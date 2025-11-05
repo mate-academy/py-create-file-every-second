@@ -2,7 +2,7 @@ from datetime import datetime
 from time import sleep
 
 
-def create_log_file_every_second() -> None:
+def main() -> None:
     while True:
         now = datetime.now()
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
@@ -14,4 +14,4 @@ def create_log_file_every_second() -> None:
 
 
 if __name__ == "__main__":
-    create_log_file_every_second()
+    main()
