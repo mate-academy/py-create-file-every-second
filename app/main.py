@@ -8,7 +8,7 @@ def main() -> None:
         current_date = datetime.now().strftime("%Y-%m-%d")
 
         file_name = "app-" + str(current_time) + ".log"
-        file_line = str(current_date) + str(current_time.replace("_", ":"))
+        file_line = current_date + " " + current_time.replace("_", ":")
 
         new_file = open(file_name, "w")
         new_file.write(file_line)
