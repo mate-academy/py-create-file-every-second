@@ -4,7 +4,7 @@ from time import sleep
 
 def main() -> None:
     while True:
-        with open(f"app-{datetime.now().strftime("%H_%M_%S")}.log", "w") as f:
+        with open(f'app-{datetime.now().strftime("%H_%M_%S")}.log', "w") as f:
             f.write(f"{datetime.now()}")
             print(f"{datetime.now()} "
                   f"app-{datetime.now().strftime("%H_%M_%S")}.log")
