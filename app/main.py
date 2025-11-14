@@ -7,7 +7,7 @@ def main() -> None:
         with open(f'app-{datetime.now().strftime("%H_%M_%S")}.log', "w") as f:
             f.write(f"{datetime.now()}")
             print(f"{datetime.now()} "
-                  f"app-{datetime.now().strftime("%H_%M_%S")}.log")
+                  f'app-{datetime.now().strftime("%H_%M_%S")}.log')
             sleep(1)
 
 
