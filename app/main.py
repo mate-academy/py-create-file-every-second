@@ -8,10 +8,10 @@ def main() -> None:
         file_name = (f"app-{time_now.hour}_"
                      f"{time_now.minute}_"
                      f"{time_now.second}.log")
-        with open(file_name, "w") as f:
-            f.write(f"{time_now.strftime("%Y-%m-%d %H:%M:%S")}")
-        with open(file_name, "r") as f:
-            print(f.read(), file_name)
+        with open(file_name, "w") as file:
+            file.write(time_now.strftime("%Y-%m-%d %H:%M:%S"))
+        with open(file_name, "r") as file:
+            print(file.read(), file_name)
         time.sleep(1)
 
 
