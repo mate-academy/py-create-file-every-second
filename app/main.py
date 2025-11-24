@@ -9,7 +9,6 @@ def main() -> None:
         name = f"app-{hours}_{minutes}_{seconds}.log"
         print(now.strftime("%Y-%m-%d %H:%M:%S"), name)
         with open(name, "w") as f:
-            #2020-01-01 14:10:07
             f.write(now.strftime("%Y-%m-%d %H:%M:%S"))
         sleep(1)
 
