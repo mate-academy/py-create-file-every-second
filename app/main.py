@@ -5,7 +5,8 @@ from time import sleep
 def main() -> None:
     while True:
         date = datetime.now()
-        filename = f"app-{date.strftime("%H_%M_%S")}.log"
+        formated_date = date.strftime("%H_%M_%S")
+        filename = "app-" + formated_date + ".log"
         with open(filename, mode="w") as file:
             content = date.strftime("%Y-%m-%d %H:%M:%S")
             file.write(content)
