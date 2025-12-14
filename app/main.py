@@ -2,10 +2,10 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
 
-def main():
+def main() -> None:
     while True:
         now = datetime.now()
-        name=f"app-{now.strftime('%H_%M_%S')}"
+        name = f"app-{now.strftime('%H_%M_%S')}"
         with open(f"{name}.log", "a") as log:
             log.write(f"{now}")
         print(f"{now} {name}.log")
