@@ -2,7 +2,7 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
 
-def main():
+def main() -> None:
     while True:
         agora = datetime.now()
         year = agora.year
@@ -17,11 +17,10 @@ def main():
 
         with open(file_name, "w") as f:
             f.write(file_content)
-        
-        print(f"{file_content} {file_name}")
-        
-        sleep(1)
 
+        print(f"{file_content} {file_name}")
+
+        sleep(1)
 
 
 if __name__ == "__main__":
