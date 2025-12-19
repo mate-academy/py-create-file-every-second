@@ -10,7 +10,7 @@ def main():
         with open(file_name, "w") as file:
             file.write(timestamp)
 
-        print(timestamp, file_name)
+        print(f"{timestamp} {file_name}")
 
         sleep(1)
 
