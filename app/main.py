@@ -1,7 +1,8 @@
 from datetime import datetime
 from time import sleep
 
-def main():
+
+def main() -> None:
     while True:
         now = datetime.now()
         filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
@@ -10,6 +11,7 @@ def main():
             f.write(content)
         print(f"{content} {filename}")
         sleep(1)
+
 
 if __name__ == "__main__":
     main()
