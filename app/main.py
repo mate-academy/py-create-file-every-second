@@ -1,20 +1,21 @@
 from datetime import datetime
-from time import sleep
+import time
+import os
 
-
-while True:
-    # Текущее время
+def create_file():
+    """Создаёт один файл с текущим временем и возвращает имя файла."""
     now = datetime.now()
-
-    # Формируем имя файла
-    file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
-
-    # Создаём файл и пишем в него timestamp
-    with open(file_name, "w") as f:
+    filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
+    with open(filename, "w") as f:
         f.write(now.strftime("%Y-%m-%d %H:%M:%S"))
+    print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} {filename}")
+    return filename
 
-    # Печатаем в консоль
-    print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} {file_name}")
+def main():
+    """Бесконечный цикл создания файлов каждую секунду."""
+    while True:
+        create_file()
+        time.sleep(1)
 
-    # Ждём 1 секунду
-    sleep(1)
+if __name__ == "__main__":
+    main()
