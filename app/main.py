@@ -1,10 +1,20 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
+from time import sleep
 
 
-def main():
-    # write your code here
-    pass
+while True:
+    # Текущее время
+    now = datetime.now()
 
+    # Формируем имя файла
+    file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
 
-if __name__ == "__main__":
-    main()
+    # Создаём файл и пишем в него timestamp
+    with open(file_name, "w") as f:
+        f.write(now.strftime("%Y-%m-%d %H:%M:%S"))
+
+    # Печатаем в консоль
+    print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} {file_name}")
+
+    # Ждём 1 секунду
+    sleep(1)
