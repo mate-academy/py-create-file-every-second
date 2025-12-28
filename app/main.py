@@ -1,6 +1,5 @@
 from datetime import datetime
 import time
-import os
 
 
 def create_file() -> str:
