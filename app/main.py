@@ -4,8 +4,6 @@ from time import sleep
 
 def main() -> None:
     while True:
-        sleep(1)
-
         date = datetime.now()
 
         filename = date.strftime("app-%H_%M_%S.log")
@@ -15,6 +13,8 @@ def main() -> None:
             f.write(timestamp)
 
         print(f"{timestamp} {filename}")
+
+        sleep(1)
 
 
 if __name__ == "__main__":
