@@ -18,7 +18,6 @@ def main() -> None:
         except KeyboardInterrupt:
             break
         finally:
-            # print(timestamp, filename)
             print(f"{timestamp} {filename}")
 
 
