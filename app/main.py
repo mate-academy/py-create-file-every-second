@@ -1,10 +1,15 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+import time
 
 
-def main():
-    # write your code here
-    pass
+def main() -> None:
+    while True:
+        value = datetime.now()
+        data = str(value)
 
+        with open(f"app-{value.hour}_{value.minute}_{value.second}.log",
+                  "w") as file:
+            file.write(data)
 
-if __name__ == "__main__":
-    main()
+        print(f"{data} app-{value.hour}_{value.minute}_{value.second}.log")
+        time.sleep(1)
