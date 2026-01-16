@@ -7,8 +7,9 @@ def main():
         now = datetime.now()
         name = f"app-{now.hour}_{now.minute}_{now.second}.log"
 
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
         with open(name, "w") as f:
-            f.write(now.isoformat())
+            f.write(timestamp)
 
         print(now.strftime("%Y-%m-%d %H:%M:%S"), name)
         sleep(1)
