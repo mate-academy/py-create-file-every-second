@@ -2,7 +2,7 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
 
-def main():
+def main() -> None:
     while True:
         now = datetime.now()
         now_str = now.strftime("%Y-%m-%d %H:%M:%S")
