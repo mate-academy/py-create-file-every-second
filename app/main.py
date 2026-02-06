@@ -2,7 +2,7 @@ from datetime import datetime
 from time import sleep
 
 
-def main():
+def main() -> str:
     while True:
         now = datetime.now()
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
