@@ -2,7 +2,7 @@
 
 - Read [the guideline](https://github.com/mate-academy/py-task-guideline/blob/main/README.md) before start
 
-Write an app that will create 1 file every 1 second in current directory (where the script is located).
+Write an app that will create 1 file every 1 second in the current working directory (project root).
 
 - File name must be in the following format: `app-{hours}_{minutes}_{seconds}.log`.
 - File content must be a timestamp of this operation (example: 2007-06-29 13:49:40).
