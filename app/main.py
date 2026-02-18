@@ -1,5 +1,25 @@
+import os
 from datetime import datetime
 from time import sleep
+from types import TracebackType
+from typing import Optional, Type
+
+
+class CleanUpFile:
+    def __init__(self, filename: str) -> None:
+        self.filename = filename
+
+    def __enter__(self) -> str:
+        return self.filename
+
+    def __exit__(
+        self,
+        exc_type: Optional[Type[BaseException]],
+        exc_val: Optional[BaseException],
+        exc_tb: Optional[TracebackType]
+    ) -> None:
+        if os.path.exists(self.filename):
+            os.remove(self.filename)
 
 
 def get_filename(now: datetime) -> str:
