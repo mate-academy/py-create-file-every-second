@@ -1,9 +1,8 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
-def main():
 
-
+def main() -> None:
     while True:
         date_full = str(datetime.now()).split(".")[0]
         time_full = date_full.split(" ")[1]
@@ -16,7 +15,6 @@ def main():
         file_created.write(f"{content}")
         print(f"{content} {file_name}")
         sleep(1)
-
 
 
 if __name__ == "__main__":
