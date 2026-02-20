@@ -12,5 +12,6 @@ def main() -> None:
             print(now.strftime("%Y-%m-%d %H:%M:%S"), file_name)
             sleep(1)
 
+
 if __name__ == "__main__":
     main()
