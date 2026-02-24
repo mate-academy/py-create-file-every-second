@@ -1,10 +1,20 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
+from time import sleep
 
 
-def main():
-    # write your code here
-    pass
+def main(count: None = None) -> None:
+    i = 0
+    while True:
+        now = datetime.now()
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+        filename = f"app-{now.hour}_{now.minute}_{now.second}.log"
 
+        with open(filename, "w") as f:
+            f.write(timestamp)
 
-if __name__ == "__main__":
-    main()
+        print(f"{timestamp} {filename}")
+        sleep(1)
+
+        i += 1
+        if count is not None and i >= count:
+            break
