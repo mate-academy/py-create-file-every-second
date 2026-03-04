@@ -3,14 +3,13 @@ from time import sleep
 
 
 def main() -> None:
-    now = datetime.now()
     while True:
+        now = datetime.now()
         file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
-        with open(file_name, "a") as f:
-            f.write(str(now))
-            print(now, file_name)
-            sleep(1)
 
+        with open(file_name, "w", encoding="utf-8") as file:
+            file.write(str(now))
 
-if __name__ == "__main__":
-    main()
+        print(now, file_name)
+
+        sleep(1)
