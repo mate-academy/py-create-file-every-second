@@ -2,15 +2,19 @@ from datetime import datetime
 from time import sleep
 
 
-def main():
+def main() -> None:
     while True:
-        try:
-            filename = datetime.now().strftime("app-%H_%M_%S") + ".log"
-            with open(filename, "w") as file:
-                file.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+        now = datetime.now()
 
-        except KeyboardInterrupt:
-            break
+        filename = now.strftime("app-%H_%M_%S") + ".log"
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+
+        with open(filename, "w", encoding="utf-8") as file:
+            file.write(timestamp)
+
+        print(f"{timestamp} {filename}")
+
+        sleep(1)
 
 
 if __name__ == "__main__":
