@@ -2,7 +2,7 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 import time
 
 
-def main():
+def main() -> None:
     while True:
         # 1. Get current time for content and filename
         now = datetime.now()
@@ -27,6 +27,7 @@ def main():
 
         # 4. Wait for 1 second before the next iteration
         time.sleep(1)
+
 
 if __name__ == "__main__":
     main()
