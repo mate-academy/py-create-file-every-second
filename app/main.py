@@ -1,5 +1,5 @@
 from datetime import datetime
-import time  #DO NOT CHANGE THIS IMPORT
+import time
 
 
 def main() -> None:
