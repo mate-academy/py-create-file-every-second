@@ -1,14 +1,14 @@
 from datetime import datetime
-import time# DO NOT CHANGE THIS IMPORT
+import time  #DO NOT CHANGE THIS IMPORT
 
 
-def main():
+def main() -> None:
     while True:
         try:
             now = datetime.now()
             filename = now.strftime("app-%H_%M_%S.log")
             content = now.strftime("%Y-%m-%d %H:%M:%S")
-            with open(filename, 'w') as file:
+            with open(filename, "w") as file:
                 file.write(content)
             print(f"{content} {filename}")
             time.sleep(1)
