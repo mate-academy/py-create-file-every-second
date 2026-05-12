@@ -1,5 +1,5 @@
-from datetime import datetime, time  # DO NOT CHANGE THIS IMPORT
-from time import sleep
+import time
+from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 
 
 def main() -> None:
@@ -10,7 +10,7 @@ def main() -> None:
         with open(file_name, "w") as file:
             file.write(content_file)
         print(f"{content_file} {file_name}")
-        sleep(1)
+        time.sleep(1)
 
 if __name__ == "__main__":
     main()
