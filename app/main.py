@@ -11,8 +11,8 @@ def main() -> None:
 
             with open(name,"w", encoding = "utf8") as file:
                 file.write(d_format)
-            print(d_format, end = " ")
-            print(name)
+            # print(d_format, end = " ")
+            # print(name)
             time.sleep(1)
     except KeyboardInterrupt:
         raise
