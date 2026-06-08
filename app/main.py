@@ -2,7 +2,7 @@ from time import sleep
 from datetime import datetime
 
 
-def main():
+def main() -> None:
     while True:
         now = datetime.now()
         hours, minutes, seconds = now.hour, now.minute, now.second
