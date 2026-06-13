@@ -1,6 +1,5 @@
 from datetime import datetime
 from time import sleep
-import os
 
 
 def main() -> None:
