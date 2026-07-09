@@ -14,5 +14,6 @@ def main() -> None:
         print(f"{timestamp} {filename}")
         sleep(1)
 
+
 if __name__ == "__main__":
     main()
