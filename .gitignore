@@ -7,3 +7,4 @@ tests/*.txt
 venv/
 .pytest_cache/
 **__pycache__/
+.venv/
