@@ -1,9 +1,16 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
+from time import sleep
 
 
-def main():
-    # write your code here
-    pass
+def main() -> None:
+    while True:
+        time_t = datetime.now().strftime("%H_%M_%S")
+        title = f"app-{time_t}.log"
+        timestamp = f"{datetime.now()}"
+        with open(title, "a") as f:
+            f.write(f"{timestamp}")
+            print(f"{timestamp} {title}")
+            sleep(1)
 
 
 if __name__ == "__main__":
