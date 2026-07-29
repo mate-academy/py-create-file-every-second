@@ -1,9 +1,18 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
+from time import sleep
 
 
-def main():
-    # write your code here
-    pass
+def main() -> None:
+    while True:
+        now = datetime.now()
+        date = now.strftime("%H_%M_%S")
+        filename = f"app-{date}.log"
+
+        log_file = open(filename, "w")
+        log_file.write(now.strftime("%Y-%m-%d %H:%M:%S"))
+        print(now.strftime("%Y-%m-%d %H:%M:%S") + " " + filename)
+        log_file.close()
+        sleep(1)
 
 
 if __name__ == "__main__":
