@@ -1,9 +1,16 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
+from time import sleep
 
 
-def main():
-    # write your code here
-    pass
+def main() -> None:
+    while True:
+        now = datetime.now()
+        filename = now.strftime("app-%H_%M_%S.log")
+        content = now.strftime("%Y-%m-%d %H:%M:%S")
+        with open(filename, "a") as file:
+            file.write(content)
+        print(content, filename)
+        sleep(1)
 
 
 if __name__ == "__main__":
