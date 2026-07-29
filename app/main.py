@@ -1,9 +1,21 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+import time
 
 
-def main():
-    # write your code here
-    pass
+def main() -> None:
+
+    while True:
+
+        current_datetime = datetime.now()
+        file_name = (f"app-{current_datetime.hour}_{current_datetime.minute}_"
+                     f"{current_datetime.second}.log")
+
+        with open(file_name, "w") as f:
+            f.write(f"{current_datetime}")
+
+        time.sleep(1)
+
+        print(f"{current_datetime} {file_name}")
 
 
 if __name__ == "__main__":
