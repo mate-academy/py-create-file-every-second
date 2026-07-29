@@ -1,9 +1,18 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
+from time import sleep
 
 
-def main():
-    # write your code here
-    pass
+def main() -> None:
+    while True:
+        hours = str(datetime.now().time())[0:2]
+        minutes = str(datetime.now().time())[3:5]
+        seconds = str(datetime.now().time())[6:8]
+        file_name = f"app-{hours}_{minutes}_{seconds}.log"
+        with open(f"{file_name}", "w") as file:
+            file.write(f"{datetime.now()}")
+            print(f"{datetime.now()} {file_name}")
+
+        sleep(1)
 
 
 if __name__ == "__main__":
