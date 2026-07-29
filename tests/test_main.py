@@ -18,6 +18,7 @@ class CleanUpFiles:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
         for filename in self.filenames:
             if os.path.exists(filename):
                 os.remove(filename)
