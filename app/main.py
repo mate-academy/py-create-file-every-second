@@ -1,8 +1,9 @@
 from time import sleep
 from datetime import datetime
+from typing import Any
 
 
-def main():
+def main() -> Any:
     while True:
         date_now = datetime.now()
         timestamp = date_now.strftime("%Y-%m-%d %H:%M:%S")
