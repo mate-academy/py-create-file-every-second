@@ -2,7 +2,7 @@ from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
 
-def main():
+def main() -> None:
     while True:
         now = datetime.now()
         hours = now.hour
@@ -13,5 +13,7 @@ def main():
             f.write(now.strftime("%Y-%m-%d %H:%M:%S"))
         print(now.strftime("%Y-%m-%d %H:%M:%S"), filename)
         sleep(1)
+
+
 if __name__ == "__main__":
     main()
