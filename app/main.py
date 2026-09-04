@@ -1,7 +1,8 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 from time import sleep
 
-def main():
+
+def main() -> None:
     while True:
         hours = datetime.now().hour
         minutes = datetime.now().minute
