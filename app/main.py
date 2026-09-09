@@ -8,9 +8,13 @@ def main() -> None:
         hour = now.hour
         minute = now.minute
         second = now.second
-        with open(f"app-{hour}_{minute}_{second}.log", "w", encoding="utf-8") as file:
+        with open(
+            f"app-{hour}_{minute}_{second}.log", "w", encoding="utf-8"
+        ) as file:
             file.write(f"{now}")
-        with open(f"app-{hour}_{minute}_{second}.log", "r", encoding="utf-8") as file:
+        with open(
+            f"app-{hour}_{minute}_{second}.log", "r", encoding="utf-8"
+        ) as file:
             print(f"{file.read()} {file.name}")
         sleep(1)
 
