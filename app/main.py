@@ -1,9 +1,14 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
+import time
 
+def main() -> None:
+    while True:
+        now = datetime.now()
+        name = f"app-{now.hour}_{now.minute}_{now.second}.log"
+        with open(name, "r", encoding="utf-8") as f:
+            print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} {name}")
 
-def main():
-    # write your code here
-    pass
+            time.sleep(1)
 
 
 if __name__ == "__main__":
