@@ -9,7 +9,7 @@ def main() -> None:
         # Format the timestamp as "YYYY-MM-DD HH:MM:SS"
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
 
-        # Use integer attributes for hours, minutes, and seconds to match the example format
+        # Use integer attributes for hours, minutes, and seconds
         file_name = f"app-{now.hour}_{now.minute}_{now.second}.log"
 
         with open(file_name, "w") as file:
