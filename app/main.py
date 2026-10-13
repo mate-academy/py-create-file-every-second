@@ -1,15 +1,16 @@
 from datetime import datetime
 import time
 
+
 def main() -> None:
     while True:
         now = datetime.now()
 
-        h = now.hour
-        m = now.minute
-        s = now.second
+        hour = now.hour
+        minute = now.minute
+        second = now.second
 
-        name_archive = f"app-{h}_{m}_{s}.log"
+        name_archive = f"app-{hour}_{minute}_{second}.log"
         timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
 
         with open(name_archive, "w", encoding="utf-8") as arch:
