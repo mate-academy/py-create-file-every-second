@@ -9,13 +9,13 @@ def main() -> None:
         m = now.minute
         s = now.second
 
-        archive = f"app-{h}-{m}-{s}.log"
-        timestamp = now.strftime("%Y%m%d%H%M%S")
+        name_archive = f"app-{h}_{m}_{s}.log"
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
 
-        with open(archive, "w", encoding="utf-8") as arch:
+        with open(name_archive, "w", encoding="utf-8") as arch:
             arch.write(timestamp)
 
-        print(f"{timestamp} {archive}")
+        print(f"{timestamp} {name_archive}")
 
         time.sleep(1)
 
