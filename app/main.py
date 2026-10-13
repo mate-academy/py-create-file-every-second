@@ -1,9 +1,23 @@
-from datetime import datetime  # DO NOT CHANGE THIS IMPORT
+from datetime import datetime
+import time
 
+def main() -> None:
+    while True:
+        now = datetime.now()
 
-def main():
-    # write your code here
-    pass
+        h = now.hour
+        m = now.minute
+        s = now.second
+
+        archive = f"app-{h}-{m}-{s}.log"
+        timestamp = now.strftime("%Y%m%d%H%M%S")
+
+        with open(archive, "w", encoding="utf-8") as arch:
+            arch.write(timestamp)
+
+        print(f"{timestamp} {archive}")
+
+        time.sleep(1)
 
 
 if __name__ == "__main__":
