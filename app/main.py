@@ -3,11 +3,6 @@ import time
 
 
 def main() -> None:
-    print(
-        "Iniciando a geração de arquivos de log a cada segundo. "
-        "Pressione Ctrl+C para encerrar."
-    )
-
     while True:
         agora = datetime.now()
 
