@@ -1,14 +1,15 @@
 from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 import time
 
-def main():
+
+def main() -> None:
     while True:
-        currentTime = datetime.now()
+        current_time = datetime.now()
 
-        content = currentTime.strftime("%Y-%m-%d %H:%M:%S")
-        file_name = currentTime.strftime("app-%H_%M_%S.log")
+        content = current_time.strftime("%Y-%m-%d %H:%M:%S")
+        file_name = current_time.strftime("app-%H_%M_%S.log")
 
-        with open(file_name, 'w') as f:
+        with open(file_name, "w") as f:
             f.write(content)
 
         print(f"{content} {file_name}")
