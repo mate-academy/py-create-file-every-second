@@ -4,11 +4,14 @@ from time import sleep
 
 def main() -> None:
     while True:
-        ts = str(datetime.now())
+        ts_long = str(datetime.now())
+        ts = ts_long[:ts_long.index(".")]
         hrs = ts[ts.index(" ") + 1:ts.index(":")]
         mins = ts[ts.index(":") + 1:ts.rindex(":")]
         secs = ts[ts.rindex(":") + 1:]
-        log = open(f"{ts} app-{hrs}_{mins}_{secs}.log", "w")
+        log_name = f"app-{hrs}_{mins}_{secs}.log"
+        log = open(log_name, "w")
+        print(ts, log_name)
         log.write(ts)
         log.close()
         sleep(1)
