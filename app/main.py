@@ -4,8 +4,7 @@ from time import sleep
 
 def main() -> None:
     while True:
-        ts_long = str(datetime.now())
-        ts = ts_long[:ts_long.index(".")]
+        ts = str(datetime.now())
         hrs = ts[ts.index(" ") + 1:ts.index(":")]
         mins = ts[ts.index(":") + 1:ts.rindex(":")]
         secs = ts[ts.rindex(":") + 1:]
