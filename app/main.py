@@ -4,7 +4,7 @@ import time
 
 def main() -> None:
     """Tworzy pliki w każdej sekundzie"""
-    
+
     while True:
         now = datetime.now()
         format_time = now.strftime("%Y-%m-%d %H:%M:%S")
